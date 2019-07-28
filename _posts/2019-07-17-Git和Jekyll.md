@@ -265,9 +265,141 @@ $ git rm --cached  <file> 		//停止跟踪文件 但不删除
 
 
 
+### 7.git使用
+
+- 1.初始化
+
+  - $git init
+
+- ### 2.配置(config)
+
+  - git config –global user.email 邮箱
+  - git config –global user.name 用户名
+
+- 3.帮助(help)
+
+  - $ git help
+  - $ git help add
+  - $ git add –help
+
+- 4忽略文件(ignore)
+
+  - $ echo”temp/” » .gitignore
+  - $ echo”private_key” » .gitignore ~~~
+
+- ### 5状态(status)
+
+  ​	显示当前工作区与暂存区（Index）的粗略状态。
+
+  ​	# 显示某些文件已修改，哪些文件已准备提交等信息
+
+  - $git status
+
+- ### 6添加(add)
+
+  将文件加入缓存区
+
+  \# 添加文件
+
+  - $ git add HelloWorld.java
+
+  \# 添加子目录下的文件
+
+  - $ git add /path/to/file/HelloWorld.c
+
+  \# 通配符方式添加多个文件
+
+  - $ git add ./*.java
+
+  \# 添加工作目录下的所有文件
+
+  - $ git add -A
+
+- 7分支(branch)
+
+  该命令用于管理分支。可以查看，修改，创建，删除分支。、
+
+  \# 列出所有本质
+
+  - $ git branch -a
+
+  \# 创建新分支
+
+  - $ git branch myNewBranch
+
+  \# 删除分支
+
+  - $ git branch -d myBranch
+
+  \# 重命名分支： git branch -m
+
+  - $ git branch -m myBranchName myNewBranchName
+
+  \# 修改分支描述
+
+  - $ git branch myBranchName –edit-description
+
+- ### 8提交（commit)
+
+  将缓存区（Index）中的内容提交到git仓库中
+
+  \# 提交时填写说明(message)
+
+  - $ git commit -m “Added multiplyNumbers() function to HelloWorld.c”
+
+  \# 提交时带数字签名（由提交者的GPG密钥生成）
+
+  - $ git commit -S -m “signed commit message”
+
+  \# 自动将修改的文件加入缓存区（Index），再进行提交。
+
+  - $ git commit -a -m “Modified foo.php and removed bar.php”
+
+  \# 把本次提交与最后一次提交合并（删除最后一次提交，加入合并后的提交）
+
+  - $ git commit –amend -m “Correct message”
+
+- ### 9差异（diff)
+
+  显示工作目录、缓存区（Index）、当前git库版本之间的差异
+
+  \# 显示工作目录与缓存区（Index）之间的差异
+
+  - $ git diff
+
+  \# 显示缓存区（Index）与当前git库版本之间的差异
+
+  - $ git diff –cached
+
+  \# 显示工作目录与当前git库版本之间的差异
+
+  - $ git diff HEAD
+
+- 日志(log)
+
+  显示提交到git仓库的记录信息.
+
+  \# 显示所有提交
+
+  - $ git log
+
+  \# 以简化单行方式显示（每个提交）
+
+  - $ git log –oneline
+
+  \# 只显示合并的提交
+
+  - $ git log –merges
+
+  \# 在提交行的左侧以字符串图像的方式表示版本变化情况
+
+  - $ git log –graph
 
 
-### 7jekyll和github
+
+
+
+# jekyll和github
 
 ```
 1# jekyllrb 规范
@@ -310,7 +442,7 @@ git@github.com:feibo2011/feibo2011.github.io.git
 
 
 
-### 8.博客模版	baixin.io
+### 博客模版	baixin.io
 
 ```
 2019-7-26再次上传
