@@ -1,4 +1,4 @@
-
+。
 
 # Javascript目录
 
@@ -196,7 +196,7 @@ console.log(c);
 
 > 基本数据类型
 >
-> - 字符串
+> - 字符串 string
 > - 数值型 int float (近似数) 
 > - 布尔型（boolean）Fales  True =逻辑运算符（&& || ！多个条件链接起来）
 >
