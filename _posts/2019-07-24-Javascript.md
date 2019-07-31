@@ -1,4 +1,9 @@
-。
+---
+javascript!
+
+---
+
+
 
 # Javascript目录
 
@@ -54,7 +59,7 @@
 
 
 
-# 1.javascript概念
+# 1.概念
 
 变量和常量的知识，基本数据类型，运算符，基本数据类型间的转换，流程控制语句
 
@@ -103,32 +108,35 @@ js可以有几种写法：
 
 ### 1、什么是标识符：
 
-/*
-     * 标识符
-      *     - 在JS中所有的可以由我们自主命名的都可以称为是标识符
-      *     - 例如：变量名、函数名、属性名都属于标识符
-      *     - 命名一个标识符时需要遵守如下的规则：
-      *         1.标识符中可以含有字母 、数字 、下划线_ 、$符号
-      *         2.标识符不能以数字开头
-      *         3.标识符不能是javascript中的关键字或保留字
-      *         4.标识符一般都采用驼峰命名法
-      *             - 首字母小写，每个单词的开头字母大写，其余字母小写
-      *             helloWorld  xxxYyyZzz
-      * 
-      *     - JS底层保存标识符时实际上是采用的Unicode编码，
-      *         所以理论上讲，所有的utf-8中含有的内容都可以作为标识符
+```
+标识符
+- - 在JS中所有的可以由我们自主命名的都可以称为是标识符
+- - 例如：变量名、函数名、属性名都属于标识符
+
+命名一个标识符时需要遵守如下的规则：
+- 1.标识符中可以含有字母 、数字 、下划线_ 、$符号
+- 2.标识符不能以数字开头
+- 3.标识符不能是javascript中的关键字或保留字
+- 4.标识符一般都采用驼峰命名法
+- - 首字母小写，每个单词的开头字母大写，其余字母小写
+- helloWorld  xxxYyyZzz
+- 
+- - JS底层保存标识符时实际上是采用的Unicode编码，
+- 所以理论上讲，所有的utf-8中含有的内容都可以作为标识符
+```
 
 ###    2、常用的标识符格式：
 
-​	i j
-​	xxx_zzz
-​	_xxxx
-​	$xxx
-​	a1
-​	aaaBbbCcc
-​	AaaBbbCcc
-​	！！！！注意一点：标识符不要跟关键字同名，数字不允许作为首字母出现，这样我们js比较容易的区分开标识符和数字
-​	
+```
+	i j
+xxx_zzz
+_xxxx
+	$xxx
+	a1
+	aaaBbbCcc
+	AaaBbbCcc
+	！！！！注意一点：标识符不要跟关键字同名，数字不允许作为首字母出现，这样我们js比较容易的区分开标识符和数字
+```
 
 ### 3、关键字：
 
@@ -186,13 +194,189 @@ console.log(c);
 
 
 
+# 2.基本语法
+
+------
+
+JavaScript 是一个程序语言。语法规则定义了语言结构。
+
+------
+
+### JavaScript 语法
+
+JavaScript 是一个脚本语言。
+
+它是一个轻量级，但功能强大的编程语言。
+
+------
+
+### JavaScript 字面量
+
+在编程语言中，一般固定值称为字面量，如 3.14。
+
+**数字（Number）字面量** 可以是整数或者是小数，或者是科学计数(e)。
+
+```
+3.14
+
+1001
+
+123e5
+```
+
+**字符串（String）字面量** 可以使用单引号或双引号:
+
+```
+"John Doe"
+
+'John Doe'
+表达式字面（！）量 用于计算：
+
+5 + 6
+
+5 * 10
+
+
+**数组（Array）字面量** 定义一个数组：
+
+[40, 100, 1, 5, 25, 10]
+
+**对象（Object）字面量** 定义一个对象：
+
+{firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+
+**函数（Function）字面量** 定义一个函数：
+
+function myFunction(a, b) { return a * b;}
+
+```
+
+
+
+------
+
+### JavaScript 变量
+
+在编程语言中，变量用于存储数据值。
+
+JavaScript 使用关键字 **var** 来定义变量， 使用等号来为变量赋值：
+
+```javascript
+var x, length
+x = 5
+length = 6
+------------------
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+
+<p id="demo"></p>
+<script>
+var length;
+length = 6;
+document.getElementById("demo").innerHTML = length;
+</script>
+
+</body>
+</html>
+
+//输出：6
+```
+
+变量可以通过变量名访问。在指令式语言中，变量通常是可变的。字面量是一个恒定的值。 
+
+变量是一个**名称**。字面量是一个**值**。
+
+
+
+### JavaScript 操作符
+
+| 类型                   | 实例          | 描述                   |
+| :--------------------- | :------------ | :--------------------- |
+| 赋值，算术和位运算符   | =  +  -  *  / | 在 JS 运算符中描述     |
+| 条件，比较及逻辑运算符 | ==  != <  >   | 在 JS 比较运算符中描述 |
+
+------
+
+### JavaScript 语句
+
+在 HTML 中，JavaScript 语句向浏览器发出的命令。
+
+语句是用分号分隔：
+
+```
+var x = 5 + 6;
+var y = x * 10;
+```
+
+### JavaScript 关键字
+
+JavaScript 关键字用于标识要执行的操作。
+
+和其他任何编程语言一样，JavaScript 保留了一些关键字为自己所用。
+
+var 关键字告诉浏览器创建一个新的变量：
+
+```
+var x = 5 + 6;
+var y = x * 10;
+```
+
+JavaScript 同样保留了一些关键字，这些关键字在当前的语言版本中并没有使用，但在以后 JavaScript 扩展中会用到。
+
+```
+以下是 JavaScript 中最重要的保留字（按字母顺序）：
+
+abstract	else	instanceof	super
+boolean	enum	int	switch
+break	export	interface	synchronized
+byte	extends	let	this
+case	false	long	throw
+catch	final	native	throws
+char	finally	new	transient
+class	float	null	true
+const	for	package	try
+continue	function	private	typeof
+debugger	goto	protected	var
+default	if	public	void
+delete	implements	return	volatile
+do	import	short	while
+double	in	static	with
+```
+
+
+
+### JavaScript 注释
+
+不是所有的 JavaScript 语句都是"命令"。双斜杠 **//** 后的内容将会被浏览器忽略：
+
+
+
+### JavaScript 函数
+
+JavaScript 语句可以写在函数内，函数可以重复引用：
+
+```
+引用一个函数 = 调用函数(执行函数内的语句)。
+
+function myFunction(a, b) {
+   	return a * b;                                // 返回 a 乘以 b 的结果
+}
+
+
+```
 
 
 
 
 
 
-# 2、js数据类型
+
+# 数据类型(work)
 
 > 基本数据类型
 >
@@ -223,7 +407,7 @@ console.log(c);
 js基本的数据类型 ：数字类型，字符串型，布尔型，undefined，null
 对象类型 数组 
 
-# JS保存数据类型(work)
+### JS保存数据类型(work)
 
 包括number、string、boolean、undefined、object、function。
 
@@ -457,19 +641,20 @@ js的数据类型非常弱的，在使用算术运算符的时候,运算符两�
 
 ### 一、自动类型转换也叫“隐式类型转换”。
 
+
+
+```
 小类型向大类型的转换会自动完成，不需要程序员编写额外的代码，由jvm负责。
 
 自动类型转换的规则：符号位会自动扩展，负数补1，正数补0
 
 自动类型转换包含以下情况：
+  
+  1.byte->short->int->   long->double->
 
-​             1.byte->short->int->long
-
-​													->double->
-
-​			2.int和char类型的数据在某些情况下可以自动相互转换。
-
-### 二、
+	2.int和char类型的数据在某些情况下可以自动相互转换。
+	
+	### 二、
 
 int类型为32位，最高位为符号位，其余31位为尾数。
 
@@ -490,6 +675,11 @@ int类型为32位，最高位为符号位，其余31位为尾数，float类型�
 int类型存放了一个28位的数，而flaot类型只能承载23位，转换后精度丢失最后一位的数据。
 
 当小类型的精度（尾数）高于大类型时，要注意精度丢失问题。
+```
+
+
+
+​         
 
 #### 小练习：
 
@@ -582,7 +772,724 @@ switch(变量){
 
 
 
-# 3.DOM操作
+
+
+# 3.JavaScript 函数
+
+------
+
+函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块。
+
+```javascript 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>测试实例</title>
+<script>
+function myFunction()
+{
+    alert("Hello World!");
+}
+</script>
+</head>
+ 
+<body>
+<button onclick="myFunction()">点我</button>
+</body>
+</html>
+
+结果： 出现一个。点我
+输出hello world
+```
+
+
+
+------
+
+## JavaScript 函数语法
+
+函数就是包裹在花括号中的代码块，前面使用了关键词 function：
+
+```
+function *functionname*()
+{
+    *// 执行代码*
+}
+```
+
+当调用该函数时，会执行函数内的代码。
+
+可以在某事件发生时直接调用函数（比如当用户点击按钮时），并且可由 JavaScript 在任何位置进行调用。
+
+JavaScript 对大小写敏感。关键词 function 必须是小写的，并且必须以与函数名称相同的大小写来调用函数。
+
+## 调用带参数的函数
+
+在调用函数时，您可以向其传递值，这些值被称为参数。
+
+这些参数可以在函数中使用。
+
+```
+您可以发送任意多的参数，由逗号 (,) 分隔：
+
+myFunction(*argument1,argument2*)
+
+当您声明函数时，请把参数作为变量来声明： 
+
+function myFunction(*var1*,*var2*)
+{
+*代码*
+}
+
+```
+
+变量和参数必须以一致的顺序出现。第一个变量就是第一个被传递的参数的给定的值，以此类推。
+
+### 实例
+
+```javascript
+<p>点击这个按钮，来调用带参数的函数。</p>
+<button onclick="myFunction('Harry Potter','Wizard')">点击这里</button>
+<script>
+function myFunction(name,job){
+    alert("Welcome " + name + ", the " + job);
+}
+</script>
+--------------------------
+<!DOCTYPE html>
+<html>	
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+		//这儿--
+</body>
+</html>
+
+结果：
+点击这个按钮，来调用带参数的函数。  --》 点击这里
+Welcome Harry Potter, the Wizard
+```
+
+### 带有返回值的函数
+
+有时，我们会希望函数将值返回调用它的地方。
+
+通过使用 return 语句就可以实现。
+
+在使用 return 语句时，函数会停止执行，并返回指定的值。
+
+### 语法
+
+```javascript
+function myFunction()
+{
+    var x=5;
+    return x;
+}
+
+上面的函数会返回值 5。
+
+注意整个 JavaScript 并不会停止执行，仅仅是函数。JavaScript 将继续执行代码，从调用函数的地方。
+函数调用将被返回值取代：
+var myVar=myFunction();
+
+myVar 变量的值是 5，也就是函数 "myFunction()" 所返回的值。
+即使不把它保存为变量，您也可以使用返回值：
+
+document.getElementById("demo").innerHTML=myFunction();
+"demo" 元素的 innerHTML 将成为 5，也就是函数 "myFunction()" 所返回的值。
+```
+
+您可以使返回值基于传递到函数中的参数：
+
+# 实例  = 调用函数 
+
+```javascript
+计算两个数字的乘积，并返回结果：
+
+function myFunction(a,b)
+{
+    return a*b;
+}
+ 
+document.getElementById("demo").innerHTML=myFunction(4,3);
+"demo" 元素的 innerHTML 将是：
+12
+```
+
+
+
+在您仅仅希望退出函数时 ，也可使用 return 语句。返回值是可选的：
+
+```javascript
+function myFunction(a,b)
+{
+    if (a>b)
+    {
+        return;
+    }
+    x=a+b
+}
+
+function myFunction(a,b) {if (a>b) {  return;  }   x=a+b }
+
+```
+
+如果 a 大于 b，则上面的代码将退出函数，并不会计算 a 和 b 的总和。
+
+------
+
+## 局部 JavaScript 变量
+
+在 JavaScript 函数内部声明的变量（使用 var）是*局部*变量，所以只能在函数内部访问它。（该变量的作用域是局部的）。
+
+您可以在不同的函数中使用名称相同的局部变量，因为只有声明过该变量的函数才能识别出该变量。
+
+只要函数运行完毕，本地变量就会被删除。
+
+------
+
+## 全局 JavaScript 变量
+
+在函数外声明的变量是*全局*变量，网页上的所有脚本和函数都能访问它。
+
+------
+
+## JavaScript 变量的生存期
+
+JavaScript 变量的生命期从它们被声明的时间开始。
+
+局部变量会在函数运行以后被删除。
+
+全局变量会在页面关闭后被删除。
+
+------
+
+## 向未声明的 JavaScript 变量分配值
+
+如果您把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性。
+
+这条语句：
+
+carname="Volvo";
+
+将声明 window 的一个属性 carname。
+
+非严格模式下给未声明变量赋值创建的全局变量，是全局对象的可配置属性，可以删除。
+
+```javascript
+var var1 = 1; // 不可配置全局属性
+var2 = 2; // 没有使用 var 声明，可配置全局属性
+
+console.log(this.var1); // 1
+console.log(window.var1); // 1
+
+delete var1; // false 无法删除
+console.log(var1); //1
+
+delete var2; 
+console.log(delete var2); // true
+console.log(var2); // 已经删除 报错变量未定义
+```
+
+
+
+
+
+# 函数 - 闭包
+
+------
+
+JavaScript 变量可以是局部变量或全局变量。
+
+私有变量可以用到闭包。
+
+------
+
+## 全局变量
+
+函数可以访问由函数内部定义的变量，如：
+
+### 实例
+
+```
+function myFunction() {     var a = 4;     return a * a; }
+
+function myFunction() {
+    var a = 4;
+    return a * a;
+}
+```
+
+函数也可以访问函数外部定义的变量
+
+```javascript
+var a = 4;
+function myFunction() {
+    return a * a;
+}
+//----------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>函数可以访问定义在函数外的变量：</p>
+<button type="button" onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+var a = 4;
+function myFunction() {
+	document.getElementById("demo").innerHTML = a * a;
+} 
+</script>
+
+</body>
+</html>
+```
+
+后面一个实例中， **a** 是一个 **全局** 变量。 
+
+在web页面中全局变量属于 window 对象。
+
+全局变量可应用于页面上的所有脚本。
+
+在第一个实例中， **a** 是一个 **局部** 变量。
+
+局部变量只能用于定义它函数内部。对于其他的函数或脚本代码是不可用的。
+
+全局和局部变量即便名称相同，它们也是两个不同的变量。修改其中一个，不会影响另一个的值。 
+
+**注意**： 变量声明时如果不使用 **var** 关键字，那么它就是一个全局变量，即便它在函数内定义。
+
+### 变量生命周期
+
+全局变量的作用域是全局性的，即在整个JavaScript程序中，全局变量处处都在。
+
+而在函数内部声明的变量，只在函数内部起作用。这些变量是局部变量，作用域是局部性的；函数的参数也是局部性的，只在函数内部起作用。
+
+------
+
+### 计数器困境
+
+设想下如果你想统计一些数值，且该计数器在所有函数中都是可用的。
+
+你可以使用全局变量，函数设置计数器递增：
+
+### 实例
+
+```
+var counter = 0;   function add() {    return counter += 1; }  
+add(); add(); add();   
+// 计数器现在为 3
+```
+
+计数器数值在执行 add() 函数时发生变化。
+
+但问题来了，页面上的任何脚本都能改变计数器，即便没有调用 add() 函数。
+
+如果我在函数内声明计数器，如果没有调用函数将无法修改计数器的值：
+
+### 对比实例
+
+```
+function add() {     var counter = 0;     return counter += 1; }  
+add(); add(); add();   
+// 本意是想输出 3, 但事与愿违，输出的都是 1 !
+```
+
+以上代码将无法正确输出，每次我调用 add() 函数，计数器都会设置为 1。
+
+**JavaScript 内嵌函数可以解决该问题。**
+
+------
+
+#### JavaScript 内嵌函数
+
+所有函数都能访问全局变量。   
+
+实际上，在 JavaScript 中，所有函数都能访问它们上一层的作用域。
+
+JavaScript 支持嵌套函数。嵌套函数可以访问上一层的函数变量。 
+
+该实例中，内嵌函数 **plus()** 可以访问父函数的 **counter** 变量：
+
+#### 实例
+
+```
+function add() {
+    var counter = 0;
+    function plus() {counter += 1;}
+    plus();    
+    return counter; 
+}
+```
+
+如果我们能在外部访问  **plus()** 函数，这样就能解决计数器的困境。
+
+我们同样需要确保 **counter = 0** 只执行一次。
+
+**我们需要闭包。**
+
+------
+
+## JavaScript 闭包(自我调用)
+
+还记得函数自我调用吗？该函数会做什么？
+
+#### 实例
+
+```
+var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+})();
+ 
+add();
+add();
+add();
+ 
+// 计数器为 3
+```
+
+#### 实例解析
+
+```javascript
+变量 add 指定了函数自我调用的返回字值。 
+自我调用函数只执行一次。设置计数器为 0。并返回函数表达式。
+add变量可以作为一个函数使用。非常棒的部分是它可以访问函数上一层作用域的计数器。 
+这个叫作 JavaScript **闭包。**它使得函数拥有私有变量变成可能。
+计数器受匿名函数的作用域保护，只能通过 add 方法修改。
+
+//闭包是一种保护私有变量的机制，在函数执行时形成私有的作用域，保护里面的私有变量不受外界干扰。
+//直观的说就是形成一个不销毁的栈环境。
+```
+
+
+
+
+
+
+
+#  正则表达式
+
+正则表达式是构成搜索模式的字符序列。
+
+**该搜索模式可用于文本搜索和文本替换操作。**
+
+## 什么是正则表达式？
+
+正则表达式是构成*搜索模式（search pattern）*的字符序列。
+
+正则表达式可以是单字符，或者更复杂的模式；可用于执行所有类型的*文本搜索*和*文本替换*操作。
+
+#### 语法
+
+```
+/pattern/modifiers;
+```
+
+#### 实例
+
+```
+var patt = /w3school/i;
+
+### 例子解释：
+
+/w3school/i 是一个正则表达式。
+
+w3school 是模式（pattern）（在搜索中使用）。
+
+i 是修饰符（把搜索修改为大小写不敏感）。
+```
+
+
+
+#### 使用字符串方法
+
+search() 方法使用表达式来搜索匹配，然后返回匹配的位置。
+
+replace() 方法返回模式被替换处修改后的字符串。
+
+#### 使用字符串方法 search() 来处理字符串
+
+search() 方法也接受字符串作为搜索参数。字符串参数将被转换为正则表达式：
+
+```
+### 实例
+
+使用字符串来执行对 "W3school" 的搜索：
+
+var str = "Visit W3School!";
+var n = str.search("W3School"); 
+```
+
+#### 在字符串方法 search() 中使用正则表达式
+
+使用正则表达式执行搜索字符串中 "w3school" 的大小写不敏感的搜索：
+
+```
+var str = "Visit W3School";
+var n = str.search(/w3school/i); 
+
+n 中的结果将是：6
+```
+
+#### 使用字符串方法 replace() 处理字符串
+
+replace() 也接受字符串作为搜索参数：
+
+```
+var str = "Visit Microsoft!";
+var res = str.replace("Microsoft", "W3School"); 
+
+## 在字符串方法 replace() 中使用正则表达式
+
+使用大小写不明的正则表达式以 W3school 来替换字符串中的 Microsoft：
+
+var str = "Visit Microsoft!";
+var res = str.replace(/microsoft/i, "W3School"); 
+
+
+res 的结果将是：Visit W3School!
+```
+
+
+
+#### 正则表达式修饰符
+
+*修饰符*可用于大小写不敏感的更全局的搜素：
+
+| 修饰符 | 描述                                                     |      |
+| :----- | :------------------------------------------------------- | ---- |
+| i      | 执行对大小写不敏感的匹配。                               |      |
+| g      | 执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。 |      |
+| m      | 执行多行匹配。                                           |      |
+
+#### 正则表达式模式
+
+*括号*用于查找一定范围的字符串：
+
+| 表达式 | 描述                       |      |
+| :----- | :------------------------- | ---- |
+| [abc]  | 查找方括号之间的任何字符。 |      |
+| [0-9]  | 查找任何从 0 至 9 的数字。 |      |
+| (x\|y) | 查找由 \| 分隔的任何选项。 |      |
+
+*元字符（Metacharacter）*是拥有特殊含义的字符：
+
+| 元字符 | 描述                                        |      |
+| :----- | :------------------------------------------ | ---- |
+| \d     | 查找数字。                                  |      |
+| \s     | 查找空白字符。                              |      |
+| \b     | 匹配单词边界。                              |      |
+| \uxxxx | 查找以十六进制数 xxxx 规定的 Unicode 字符。 |      |
+
+*Quantifiers* 定义量词：
+
+| 量词 | 描述                                |      |
+| :--- | :---------------------------------- | ---- |
+| n+   | 匹配任何包含至少一个 n 的字符串。   |      |
+| n*   | 匹配任何包含零个或多个 n 的字符串。 |      |
+| n?   | 匹配任何包含零个或一个 n 的字符串。 |      |
+
+#### 使用 RegExp 对象
+
+在 JavaScript 中，RegExp 对象是带有预定义属性和方法的正则表达式对象。
+
+#### 使用 test()
+
+test() 是一个正则表达式方法。
+
+它通过模式来搜索字符串，然后根据结果返回 true 或 false。
+
+下面的例子搜索字符串中的字符 "e"：
+
+#### 实例
+
+```
+var patt = /e/;
+patt.test("The best things in life are free!"); 
+
+由于字符串中有一个 "e"，以上代码的输出将是：true
+
+
+您不必首先把正则表达式放入变量中。上面的两行可缩短为一行：
+/e/.test("The best things in life are free!");
+
+```
+
+## 使用 exec()
+
+exec() 方法是一个正则表达式方法。
+
+它通过指定的模式（pattern）搜索字符串，并返回已找到的文本。
+
+如果未找到匹配，则返回 null
+
+```
+下面的例子搜索字符串中的字符 "e"：
+
+### 实例
+
+
+/e/.exec("The best things in life are free!");
+由于字符串中有一个 "e"，以上代码的输出将是：e
+
+
+
+```
+
+
+
+# 作用域
+
+------
+
+作用域是可访问变量的集合。
+
+------
+
+## JavaScript 作用域
+
+在 JavaScript 中, 对象和函数同样也是变量。
+
+**在 JavaScript 中, 作用域为可访问变量，对象，函数的集合。**
+
+JavaScript 函数作用域: 作用域在函数内修改。
+
+------
+
+## 1.JavaScript 局部作用域
+
+变量在函数内声明，变量为局部作用域。
+
+局部变量：只能在函数内部访问。
+
+#### 实例
+
+```javascript
+// 此处不能调用 carName 变量
+function myFunction() {
+    var carName = "Volvo";
+    // 函数内可调用 carName 变量
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>菜(runoob.com)</title> 
+</head>
+<body>
+
+<p>局部变量在声明的函数外不可以访问。</p>
+<p id="demo"></p>
+<script>
+myFunction();
+document.getElementById("demo").innerHTML = "carName 的类型是：" +  typeof carName;
+
+function myFunction() 
+{
+    var carName = "Volvo";
+}
+</script>
+
+</body>
+</html>
+
+//jieguo:
+//局部变量在声明的函数外不可以访问。
+//carName 的类型是：undefined
+```
+
+因为局部变量只作用于函数内，所以不同的函数可以使用相同名称的变量。
+
+局部变量在函数开始执行时创建，函数执行完后局部变量会自动销毁。
+
+------
+
+## 2.JavaScript 全局变量
+
+变量在函数外定义，即为全局变量。
+
+全局变量有 **全局作用域**: 网页中所有脚本和函数均可使用。 
+
+#### 实例
+
+```
+var carName = " Volvo";
+ 
+// 此处可调用 carName 变量
+function myFunction() {
+    // 函数内可调用 carName 变量
+}
+```
+
+
+
+如果变量在函数内没有声明（没有使用 var 关键字），该变量为全局变量。
+
+以下实例中 carName 在函数内，但是为全局变量。
+
+#### 实例
+
+````
+// 此处可调用 carName 变量
+ 
+function myFunction() {
+    carName = "Volvo";
+    // 此处可调用 carName 变量
+}
+````
+
+
+
+------
+
+## 3.JavaScript 变量生命周期
+
+JavaScript 变量生命周期在它声明时初始化。
+
+局部变量在函数执行完毕后销毁。
+
+全局变量在页面关闭后销毁。
+
+------
+
+#### 函数参数
+
+函数参数只在函数内起作用，是局部变量。
+
+------
+
+#### HTML 中的全局变量
+
+在 HTML 中, 全局变量是 window 对象: 所有数据变量都属于 window 对象。
+
+#### 实例
+
+```
+//此处可使用 window.carName
+ 
+function myFunction() {
+    carName = "Volvo";
+}
+```
+
+
+
+
+
+# 4.html DOM
 
 属性、文本操作，css操作，对象与数组，面向对象编程
 
@@ -634,26 +1541,8 @@ DOM 是 Document Object Model 文档对象模型
 
 - 2.14 tableCell 对象 ~~~
 
-  #### 3. XML DOM 对象
 
-### HTML DOM
-
-- 2.2 form 对象
-- 2.3 image 对象
-- 2.4 anchor 对象
-- 2.5 base 对象
-- 2.6 canvas 对象
-- 2.7 Event 对象
-- 2.8 input 系列对象
-  - focus() 获焦
-  - blur() 失焦
-  - select() 选中
-- 2.9 select 对象
-- 2.10 option 对象
-- 2.11 style 对象
-- 2.12 table 对象
-- 2.13 tableRow 对象
-- 2.14 tableCell 对象
+- 3. XML DOM 对象
 
 ------
 
@@ -818,6 +1707,7 @@ getElementsByClassName("类名")
 
 ##### 节点的属性操作
 
+```
 如何来获取属性：
 	选中的元素.getAttribute("属性名")
 更改属性：
@@ -826,7 +1716,564 @@ getElementsByClassName("类名")
 	选中的元素.setAttribute("原本没有的属性名","属性值")
 删除属性
 	选中的元素.removeAttribute("属性名");
-	
+```
+
+# DOM中事件流-冒泡(work)
+
+冒泡事件；捕获事件；阻止事件防止，在内部解决，不会在外部出问题！
+
+window -> document -> body -> div -> (text) 捕获过程
+
+ -> (text文本 ) -> div -> body -> document-> window  冒泡过程
+
+
+
+![冒泡/捕获](/images/冒泡/捕获)
+
+```
+DOM中的事件流的三个机制
+
+事件流:
+页面触发一个事件时，会按照一定的顺序来响应事件，事件的响应过程为事件流
+就我个人理解就是网页对点击事件的排序顺序就是事件流
+```
+
+```
+事件流的起源：就是在浏览器发展到第四代的时候，浏览器开发团队遇到一个问题：页面的哪一部分会拥有某个特定的事件？要明白这个问题问的是什么，可以想象画在一张纸上的一组同心圆。如果你把手指放在圆心上，那么你的手指指向的不是一个圆，而是纸上的所有圆。也就是说如果单击了页面的某个按钮，同时也单击了按钮的容器元素，甚至单击了整个页面。
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件流</title>
+    <style type="text/css">
+        #content{width: 150px;height: 150px;background-color: red;}
+        #btn{width: 80px;height: 80px;background-color: green;}
+    </style>
+</head>
+<body>
+    <div id="content">content
+        <div id="btn">button</div>
+    </div>
+
+    <script type="text/javascript">
+        var content = document.getElementById("content");
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+            alert("btn");
+        };
+        content.onclick = function(){
+            alert("content");
+        };
+        document.onclick = function(){
+            alert("document");
+        }
+    </script>
+</body>
+</html>
+```
+
+```
+以上实例和我们阐述了 事件流基本的运行机制 
+也就是 从最外的document 页面区域往btn区域执行在达到目标阶段时依次向最外面进行冒泡
+```
+
+
+
+- #### DOM事件流存在三个阶段: 事件捕获阶段,处于目标阶段,事件冒泡阶段
+
+  #### 1. 什么是事件捕获
+
+  ```
+  通俗的理解就是，当鼠标点击或者触发dom事件时，浏览器会从根节点开始由外到内进行事件传播，即点击了子元素，如果父元素通过事件捕获方式注册了对应的事件的话，会先触发父元素绑定的事件。
+  ```
+
+  #### 2. 什么是事件冒泡
+  
+  ```
+与事件捕获恰恰相反，事件冒泡顺序是由内到外进行事件传播，直到根节点。
+  ```
+
+  #### 3. 在达到目标阶段的情况下 实际上我们的目标阶段的事件被执行了两次
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    #wrapDiv, #innerP, #textSpan{
+        margin: 5px;padding: 5px;box-sizing: border-box;cursor: default;
+    }
+    #wrapDiv{
+        width: 300px;height: 300px;border: indianred 3px solid;
+    }
+    #innerP{
+        width: 200px;height: 200px;border: hotpink 3px solid;
+    }
+    #textSpan{
+        display: block;width: 100px;height: 100px;border: orange 3px solid;
+    }
+    </style>
+</head>
+<body>
+     <div id="wrapDiv">wrapDiv
+        <p id="innerP">innerP
+            <span id="textSpan">textSpan</span>
+        </p>
+    </div>
+    <script>
+    var wrapDiv = document.getElementById("wrapDiv");
+    var innerP = document.getElementById("innerP");
+    var textSpan = document.getElementById("textSpan");
+
+    // 捕获阶段绑定事件
+    window.addEventListener("click", function(e){
+        console.log("window 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    document.addEventListener("click", function(e){
+        console.log("document 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    document.documentElement.addEventListener("click", function(e){
+        console.log("documentElement 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    document.body.addEventListener("click", function(e){
+        console.log("body 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    wrapDiv.addEventListener("click", function(e){
+        console.log("wrapDiv 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    innerP.addEventListener("click", function(e){
+        console.log("innerP 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    textSpan.addEventListener("click", function(e){
+        console.log("textSpan 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    // 冒泡阶段绑定的事件
+    window.addEventListener("click", function(e){
+        console.log("window 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    document.addEventListener("click", function(e){
+        console.log("document 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    document.documentElement.addEventListener("click", function(e){
+        console.log("documentElement 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    document.body.addEventListener("click", function(e){
+        console.log("body 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    wrapDiv.addEventListener("click", function(e){
+        console.log("wrapDiv 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    innerP.addEventListener("click", function(e){
+        console.log("innerP 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    textSpan.addEventListener("click", function(e){
+        console.log("textSpan 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+</script>
+</body>
+</html>
+
+
+```
+
+```
+从上面所画的事件传播的过程能够看出来，当点击鼠标后，会先发生事件的捕获
+
+　　· 捕获阶段：首先window会获捕获到事件，之后document、documentElement、body会捕获到，再之后就是在body中DOM元素一层一层的捕获到事件，有wrapDiv、innerP。
+
+　　· 目标阶段：真正点击的元素textSpan的事件发生了两次，因为在上面的JavaScript代码中，textSapn既在捕获阶段绑定了事件，又在冒泡阶段绑定了事件，所以发生了两次。但是这里有一点是需要注意，在目标阶段并不一定先发生在捕获阶段所绑定的事件，而是先绑定的事件发生，一会会解释一下。
+
+　　· 冒泡阶段：会和捕获阶段相反的步骤将事件一步一步的冒泡到window
+
+上述代码中的两个属性：e.target和e.currentTarget
+
+　　target和currentTarget都是event上面的属性，target是真正发生事件的DOM元素，而currentTarget是当前事件发生在哪个DOM元素上。(监听器触发事件的节点)
+　　
+　　
+　　
+
+　　可以结合控制台打印出来的信息理解下，目标阶段也就是 target == currentTarget的时候。我没有打印它们两个因为太长了，所以打印了它们的nodeName，但是由于window没有nodeName这个属性，所以是undefined。
+```
+
+
+
+
+
+##### 那可能有一个疑问，我们不用addEventListener绑定的事件会发生在哪个阶段呢，我们来一个测试，顺便再演示一下我在上面的目标阶段所说的目标阶段并不一定先发生捕获阶段所绑定的事件是怎么一回事。
+
+```html
+<script>
+    var wrapDiv = document.getElementById("wrapDiv");
+    var innerP = document.getElementById("innerP");
+    var textSpan = document.getElementById("textSpan");
+
+    // 测试直接绑定的事件到底发生在哪个阶段
+    wrapDiv.onclick = function(){
+        console.log("wrapDiv onclick 测试直接绑定的事件到底发生在哪个阶段")
+    };
+
+    // 捕获阶段绑定事件
+    window.addEventListener("click", function(e){
+        console.log("window 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    document.addEventListener("click", function(e){
+        console.log("document 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    document.documentElement.addEventListener("click", function(e){
+        console.log("documentElement 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    document.body.addEventListener("click", function(e){
+        console.log("body 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    wrapDiv.addEventListener("click", function(e){
+        console.log("wrapDiv 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    innerP.addEventListener("click", function(e){
+        console.log("innerP 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    textSpan.addEventListener("click", function(){
+        console.log("textSpan 冒泡 在捕获之前绑定的")
+    }, false);
+
+    textSpan.onclick = function(){
+        console.log("textSpan onclick")
+    };
+
+    textSpan.addEventListener("click", function(e){
+        console.log("textSpan 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    // 冒泡阶段绑定的事件
+    window.addEventListener("click", function(e){
+        console.log("window 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    document.addEventListener("click", function(e){
+        console.log("document 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    document.documentElement.addEventListener("click", function(e){
+        console.log("documentElement 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    document.body.addEventListener("click", function(e){
+        console.log("body 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    wrapDiv.addEventListener("click", function(e){
+        console.log("wrapDiv 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    innerP.addEventListener("click", function(e){
+        console.log("innerP 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    textSpan.addEventListener("click", function(e){
+        console.log("textSpan 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+</script>
+```
+
+
+
+```
+　　· textSpan是被点击的元素，也就是目标元素，所有在textSpan上绑定的事件都会发生在目标阶段，在绑定捕获代码之前写了绑定的冒泡阶段的代码，所以在目标元素上就不会遵守先发生捕获后发生冒泡这一规则，而是先绑定的事件先发生。[在目标元素上就不会遵守先发生捕获后发生冒泡这一规则，而是先绑定的事件先发生。]
+　　· 由于wrapDiv不是目标元素，所以它上面绑定的事件会遵守先发生捕获后发生冒泡的规则。所以很明显用onclick直接绑定的事件发生在了冒泡阶段。
+```
+
+
+
+#### 4. 如何解决冒泡事件带来的影响呢
+
+```
+在支持addEventListener()的浏览器中，可以调用事件对象的stopPropagation()方法以阻止事件的继续传播。如果在同一对象上定义了其他处理程序，剩下的处理程序将依旧被调用，但调用stopPropagation()之后任何其他对象上的事件处理程序将不会被调用。不仅可以阻止事件在冒泡阶段的传播，还能阻止事件在捕获阶段的传播。
+
+　　IE9之前的IE不支持stopPropagation()方法，而是设置事件对象cancelBubble属性为true来实现阻止事件进一步传播。
+　　
+　　
+```
+
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    #wrapDiv, #innerP, #textSpan{
+        margin: 5px;padding: 5px;box-sizing: border-box;cursor: default;
+    }
+    #wrapDiv{
+        width: 300px;height: 300px;border: indianred 3px solid;
+    }
+    #innerP{
+        width: 200px;height: 200px;border: hotpink 3px solid;
+    }
+    #textSpan{
+        display: block;width: 100px;height: 100px;border: orange 3px solid;
+    }
+    </style>
+</head>
+<body>
+     <div id="wrapDiv">wrapDiv
+        <p id="innerP">innerP
+            <span id="textSpan">textSpan</span>
+        </p>
+    </div>
+<script>
+    var wrapDiv = document.getElementById("wrapDiv");
+    var innerP = document.getElementById("innerP");
+    var textSpan = document.getElementById("textSpan");
+
+    // 测试直接绑定的事件到底发生在哪个阶段
+    wrapDiv.onclick = function(){
+        console.log("wrapDiv onclick 测试直接绑定的事件到底发生在哪个阶段")
+    };
+
+    // 捕获阶段绑定事件
+    window.addEventListener("click", function(e){
+        console.log("window 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    document.addEventListener("click", function(e){
+        console.log("document 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    document.documentElement.addEventListener("click", function(e){
+        console.log("documentElement 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    document.body.addEventListener("click", function(e){
+        console.log("body 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    wrapDiv.addEventListener("click", function(e){
+        console.log("wrapDiv 捕获", e.target.nodeName, e.currentTarget.nodeName);
+        // 在捕获阶段阻止事件的传播
+        e.stopPropagation();
+    }, true);
+
+    innerP.addEventListener("click", function(e){
+        console.log("innerP 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    textSpan.addEventListener("click", function(){
+        console.log("textSpan 冒泡 在捕获之前绑定的")
+    }, false);
+
+    textSpan.onclick = function(){
+        console.log("textSpan onclick")
+    };
+
+    textSpan.addEventListener("click", function(e){
+        console.log("textSpan 捕获", e.target.nodeName, e.currentTarget.nodeName);
+    }, true);
+
+    // 冒泡阶段绑定的事件
+    window.addEventListener("click", function(e){
+        console.log("window 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    document.addEventListener("click", function(e){
+        console.log("document 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    document.documentElement.addEventListener("click", function(e){
+        console.log("documentElement 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    document.body.addEventListener("click", function(e){
+        console.log("body 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    wrapDiv.addEventListener("click", function(e){
+        console.log("wrapDiv 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+         // 在冒泡阶段阻止事件的传播
+        // e.stopPropagation();
+    }, false);
+
+    innerP.addEventListener("click", function(e){
+        console.log("innerP 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+
+    textSpan.addEventListener("click", function(e){
+        console.log("textSpan 冒泡", e.target.nodeName, e.currentTarget.nodeName);
+    }, false);
+</script>
+
+```
+
+
+
+```
+结果:
+　实际上我们点击的是textSpan，但是由于在捕获阶段事件就被阻止了传播，所以在textSpan上绑定的事件根本就没有发生，冒泡阶段绑定的事件自然也不会发生，因为阻止事件在捕获阶段传播的特性，e.stopPropagation()很少用到在捕获阶段去阻止事件的传播，大家就以为e.stopPropagation()只能阻止事件在冒泡阶段传播。
+```
+
+#### 5.阻止事件的默认行为***
+
+e.preventDefault()可以阻止事件的默认行为发生，默认行为是指：点击a标签就转跳到其他页面、拖拽一个图片到浏览器会自动打开、点击表单的提交按钮会提交表单等等，因为有的时候我们并不希望发生这些事情，所以需要阻止默认行为。
+
+　　IE9之前的IE中，可以通过设置事件对象的returnValue属性为false达到同样的效果。
+
+```js
+function cancelHandler(event){
+    var event=event||window.event;//兼容IE
+    
+    //取消事件相关的默认行为
+    if(event.preventDefault)    //标准技术
+        event.preventDefault();
+    if(event.returnValue)    //兼容IE9之前的IE
+        event.returnValue=false;
+    return false;    //用于处理使用对象属性注册的处理程序
+}
+```
+
+
+
+#### 6. 事件委托***
+
+在JavaScript中，添加到页面上的事件处理程序数量将直接关系到页面的整体运行性能。导致这一问题的原因是多方面的。首先，每个函数都是对象，都会占用内存；内存中的对象越多，性能就越差。其次，必须事先指定所有事件处理程序而导致的DOM访问次数，会延迟整个页面的交互就绪时间。
+
+　　对“事件处理程序过多”问题的解决方案就是事件委托。事件委托利用了事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。例如，click事件会一直冒泡到document层次。也就是说，我们可以为整个页面指定一个onclick事件处理程序，而不必给每个可单击的元素分别添加事件处理程序。
+
+```html
+<ul id="color-list">
+    <li>red</li>
+    <li>yellow</li>
+    <li>blue</li>
+    <li>green</li>
+    <li>black</li>
+    <li>white</li>
+</ul>
+```
+
+```html
+　　如果点击页面中的li元素，然后输出li当中的颜色，我们通常会这样写:
+　　(function(){
+    var color_list = document.getElementById('color-list');
+    var colors = color_list.getElementsByTagName('li');
+    for(var i=0;i<colors.length;i++){
+        colors[i].addEventListener('click',showColor,false);
+    };
+    function showColor(e){
+        var x = e.target;
+        alert("The color is " + x.innerHTML);
+    };
+})();
+
+```
+
+```html
+利用事件流的特性，我们只绑定一个事件处理函数也可以完成
+(function(){
+    var color_list = document.getElementById('color-list');
+    color_list.addEventListener('click',showColor,false);
+    function showColor(e){
+        var x = e.target;
+        if(x.nodeName.toLowerCase() === 'li'){
+            alert('The color is ' + x.innerHTML);
+        }
+    }
+})();
+```
+
+#### 7. 使用事件冒泡还是事件捕获呢
+
+```
+冒泡还是捕获？
+
+　　对于事件代理来说，在事件捕获或者事件冒泡阶段处理并没有明显的优劣之分，但是由于事件冒泡的事件流模型被所有主流的浏览器兼容，从兼容性角度来说还是建议大家使用事件冒泡模型。
+
+ 
+
+```
+
+#### 事件委托还有一个好处
+
+```html
+事件委托还有一个好处就是添加进来的元素也能绑定事件：
+
+没有使用事件委托：
+
+
+<body>
+ <ul id="thl">
+   <li>001</li>
+   <li>002</li>
+   <li>003</li>
+</ul>
+<button onclick="fun()">touch</button>
+
+<script>
+    var thl= document.getElementById('thl');
+    var aLi = thl.getElementsByTagName('li');
+    for (var i = 0; i < aLi.length; i++) {
+    　　aLi[i].onclick = fn;
+    }
+    
+    function fn (){
+      console.log(this.innerHTML);
+    }
+
+    function fun(){
+        var node=document.createElement("li");
+        var textnode=document.createTextNode("maomaoliang");
+        node.appendChild(textnode);
+        document.getElementById("thl").appendChild(node);
+    }
+</script>
+</body>
+```
+
+```html
+使用了事件委托
+<script>
+    var thl= document.getElementById('thl');
+    thl.onclick = function(ev) {
+        ev = ev || event;
+        //兼容处理
+        var target = ev.target || ev.srcElement;
+    　　//找到li元素
+        if (target.nodeName.toLowerCase() == 'li') {
+              console.log(target.innerHTML);
+         }
+    };
+
+    function fun(){
+        var node=document.createElement("li");
+        var textnode=document.createTextNode("maomaoliang");
+        node.appendChild(textnode);
+        document.getElementById("thl").appendChild(node);
+    }
+</script>
+```
 
 
 
@@ -834,7 +2281,7 @@ getElementsByClassName("类名")
 
 
 
-# BOM
+# 5.浏览器BOM
 
 ### 1. 什么是BOM
 
@@ -912,7 +2359,7 @@ back() forward() go() 后退,前进,去
 
 # JavaScript 事件
 
-### 1. 事件的绑定
+#### 1. 事件的绑定
 
 - 事件作为 元素的属性
 
@@ -936,9 +2383,9 @@ back() forward() go() 后退,前进,去
         attachEvent('事件名字', funName);
   ```
 
-  \~~~
+  
 
-  ### 2. 解除绑定
+  #### 2. 解除绑定
 
 - 第1种和第2种的绑定方式
 
@@ -957,12 +2404,12 @@ back() forward() go() 后退,前进,去
         detachEvent('事件名字', funName);
   ```
 
-### 3. 给一组元素绑定事件和this的使用
+#### 3. 给一组元素绑定事件和this的使用
 
 - 循环绑定事件,获取触发事件的元素对象时,需要使用this
 - 元素内部绑定事件时传入this.表示该元素对象自己
 
-### 4. 闭包 closure
+#### 4. 闭包 closure
 
 - 在循环绑定事件时,将循环变量保留下来,就必须使用闭包
 
@@ -980,10 +2427,11 @@ back() forward() go() 后退,前进,去
     }
   ```
 
-### 5. 常用事件
+#### 5. 常用事件
 
-### 5.1 鼠标事件
+#### 5.1 鼠标事件
 
+```
 - onclick 单击触发
 - ondblclick 双击触发
 - oncontextmenu 右击触发/return false阻止系统菜单
@@ -992,25 +2440,34 @@ back() forward() go() 后退,前进,去
 - onmousedown 鼠标按下触发
 - onmouseup 鼠标松开触发
 - onmousemove 鼠标移动触发
+```
 
-### 5.2 键盘事件
 
+
+#### 5.2 键盘事件
+
+```
 - onkeydown 按下按键触发
 - onkeyup 松开按键触发
 - onkeypress 按下并松开触发(JS高级事件) 不是所有的按键都能触发,无输出的按键是无法触发 (方向键/shift/ctrl/alt/fn/tab/大小写切换)
+```
 
-### 5.3 表单事件
 
+
+#### 5.3 表单事件
+
+```
 - onsubmit 表单被提交时触发
 - onreset 表单被重置时触发
 - onfocus 获取焦点时触发
 - onblur 失去焦点时触发
+```
 
-### 5.4 框架/对象事件
+#### 5.4 框架/对象事件
 
-### 5.5 其他事件
+#### 5.5 其他事件
 
-### 6. event事件对象
+#### 6. event事件对象
 
 - 6.1 获取 `var e = e || window.event;`
 
@@ -1059,8 +2516,7 @@ Number，String，Boolean，Date，Math，Array，window，location......
 
 ### 自定义对象
 
-开发人员自己去定义的一个对象
-
+```javascript
 1、如何来定义对象：
 	1)语法：var obj={};
 	2)使用我们的new关键字来创建
@@ -1073,11 +2529,14 @@ Number，String，Boolean，Date，Math，Array，window，location......
 			this.number1 = num1;
 			this.number2 = num2
 		}
-		
-
 4)通过Object.create()创建对象
 		var obj = Object.create(null)
 		var obj = Object.create({"name":"tom","age"："3"})
+```
+
+
+
+
 
 ### 2、对象的属性
 
@@ -1106,6 +2565,7 @@ Number，String，Boolean，Date，Math，Array，window，location......
 
 ### 定义数组的方法：
 
+```
 1、var arr=[]//定义一个空数组
 2、var arr=[10,20,{"name":"tomy","age":19},0.1,"string",true,["aaa","bbb"]]//定义的同时赋值
 3、var arr=new Array();//定义一个空数组
@@ -1124,6 +2584,11 @@ Number，String，Boolean，Date，Math，Array，window，location......
 数组的分类：
 索引数组：下标是数字
 关联数组：下标是可以是自定义的字符
+```
+
+
+
+
 
 ​	
 
@@ -1141,6 +2606,7 @@ var arr = [["id","aaa",10],[1,1,2,3],[["a","b","c"],1,1]]
 
 ### 多维数组
 
+```javascript
 js 操作数组的api
 ！1）concat():连接两个或更多的数组的方法(不修改原数组)
 	var arr1 = [1,2,3];
@@ -1187,11 +2653,14 @@ var del = [1,2,3,4,5,6,7,8,9]
 10）reverse:颠倒的数组顺序
 	var arr=[1,2,3,4,5,6,7,8,9]
 	var a = arr.reverse()
+```
 
 
-​		
 
-# 4.AJAX(js)
+
+
+
+# 6.AJAX(js)
 
 ## 1.Ajax概念
 
@@ -1333,7 +2802,7 @@ $.ajax({
 
 
 
-# 5.ajax请求五步（work）
+# ajax请求五步（work）
 
 ```
 小结：
@@ -1417,257 +2886,7 @@ function callback1() {
 
 
 
-
-
-# 6.js测试题目
-
-1.QQ号从10000开始，目前最高位10位，可以匹配QQ号的是``/^[1-9]\d{4,9}$/``
-
-```js
-
-第一位不能是0；
-QQ一共的位数，5位-10位
-（部分看到的11位是QQ里把主显设置，设为手机号才会显示的，真正的还是11位）
-
-function isQQ(qq) {
-    qq=qq+"";
-    var reg=/^[1-9]\d{4,9}$/;
-    if (reg.test(qq)){
-        return true;
-    } else{
-        return false;
-    }
-}
-console.log(isQQ(123));//false
-console.log(isQQ("2222"));//false
-console.log(isQQ("12222"));//true
-console.log(isQQ("22222"));//true
-console.log(isQQ("1234567890"));//true
-console.log(isQQ("12345678901"));//false
-console.log(isQQ("222w22"));//false
-
-//对于my_data循环
-// var my_data={a:’Ape’, b:’Banana’, c:’Citronella’};
-// for(var key in my_data) {}
-
-
-```
-
-
-
-2.分析下面代码输出结果5
-
-
-
-```javascript
-var arr =  new Array(5);
-
-arr(0) = 1;
-
-arr(2) = 2;
-
-Console.log(arr.length);
-
-
-		
-		var arr =  new Array(5);
-
-		arr(0) = 1;
-
-		arr(2) = 2;
-
-		Console.log(arr.length);
-
- 
-变形2---输出5
-emp=new Array(5);
-
-emp[1]=1;
-
-emp[2]=2;
-
-document.write(emp.length);
-
-变形3 输出6
-var arr = new Array(5)
-arr[1]= 1;
-arr[5]=2;
-console.log(arr.length);
-
-```
-
-
-
-3.下列选项Dom的节点类型：
-
-
-
-
-
-5.js月份
-
-```javascript
-<script type="text/javascript">
-
-var d=new Date()
-
-var month=new Array(12)
-month[0]="January"
-month[1]="February"
-month[2]="March"
-month[3]="April"
-month[4]="May"
-month[5]="June"
-month[6]="July"
-month[7]="August"
-month[8]="September"
-month[9]="October"
-month[10]="November"
-month[11]="December"
-
-document.write("The month is " + month[d.getMonth()])
-
-</script>
-
-//输出The month is July
-```
-
-### 输出b
-
-```
-var s = "abcdefg";
-alert(s.substring(1,2));
-```
-
-
-
-
-
-
-
-| **4.****AD** | **下列(   )可以使窗口显示前一个页面(选择二项)** |            |
-| ------------ | ----------------------------------------------- | ---------- |
-|              |                                                 |            |
-|              | **A.**                                          | back( )    |
-|              | **B.****加载历史列表中的下一个URL页面**         | forward( ) |
-|              | **C.**                                          | go(1)      |
-|              | **D.**                                          | go(-1)     |
-
-| **27.B** | **下列正则表达式中,(   )可以匹配首位是小写字母,其他位数是小写字母或数字的最少两位字符串.(选择一项)** |                    |
-| -------- | ------------------------------------------------------------ | ------------------ |
-|          |                                                              |                    |
-|          | **A.**                                                       | /^\w{2,}/          |
-|          | **B.**                                                       | /^[a-z][a-z0-9]+$/ |
-|          | **C.**                                                       | /^[a-z0-9]+$/      |
-|          | **D.**                                                       | /^[a-z]\d+$/       |
-
-| **31.AB** | **以下关于jQuery选择器使用正确的是(   )(选择二项)** |                                                              |
-| --------- | --------------------------------------------------- | ------------------------------------------------------------ |
-|           |                                                     |                                                              |
-|           | **A.**                                              | 对于<div id=”id#a”>welcome</div>的正确方法是$(“#id\\#a”)     |
-|           | **B.**                                              | 对于<div id="id[2]">welcome</div>的正确方法是$(“#id\\[2\\]”) |
-
-37在JavaScript中，把字符串“123”转换为整型值123的正确方法是：
-
-```
-var str="123";
-
-var num=parseInt(str);
-```
-
-
-
-
-
-
-
-| **38.D** | **对于ECMAScript的描述中，以下说法错误的是(   )(选择一项)** |                                                            |
-| -------- | ----------------------------------------------------------- | ---------------------------------------------------------- |
-|          |                                                             |                                                            |
-|          | **A.**                                                      | 它是一个重要的标准，并不是javascript唯一的部分             |
-|          | **B.**                                                      | 是一种开放的，国际上广为接受的，标准的脚本言规范。         |
-|          | **C.**                                                      | 它主要描述了语法、变量、数据类型、运算符、逻辑控制语句等。 |
-|          | **D.**no                                                    | ECMAScript遵循了JavaScript标准。                           |
-
-
-
-
-
-
-
-
-
-| **46.B** | **关于document对象的常用方法，以下说法错误的有(   )(选择一项)** |                                                     |
-| -------- | ------------------------------------------------------------ | --------------------------------------------------- |
-|          |                                                              |                                                     |
-|          | **A.**                                                       | getElementById( )  返回拥有指定id的第一个对象的引用 |
-|          | **B.**                                                       | getElementById( )  返回拥有指定id的对象的集合       |
-|          | **C.**                                                       | getElementsByName( )  返回拥有指定名称的对象的集合  |
-|          | **D.**                                                       | write( ) 向文档写文本，HTML表达式或javascript代码   |
-
- 
-
-| **47.D** | **对于Math对象常用方法，以下描述不正确的是(   )(选择一项)** |                                      |
-| -------- | ----------------------------------------------------------- | ------------------------------------ |
-|          |                                                             |                                      |
-|          | **A.**                                                      | ceil( ) 向上舍入                     |
-|          | **B.**                                                      | floor( )向下舍入                     |
-|          | **C.**                                                      | round( )四舍五入                     |
-|          | **D.**                                                      | random( )返回0~1中的随机数，包括0和1 |
-
- 49.在JavasScript中，若要实现复选框全选功能，document.getElementsByName("chk");
-
-```javascript
-<script type="text/javascript">
-
-  function allChecked( ){
-
-         var allck=document.getElementsByName("chk");//这儿
-         for(var i = 0 ;i<allck.length;i++){
-
-                   allck[i].checked=true;
-
-          }
-
-  }
-
-</script>
-
-<body>
-
-<p><input name="chk" type="checkbox" value="滑雪">滑雪
-
-<p><input name="chk" type="checkbox" value="游泳">游泳
-
-<p><input name="chk" type="checkbox" value="爬山">爬山
-
-<p><input name="btn" type="button" onClick="allChecked( )" value="选择">
-
-</body>
-```
-
-**在JavaScript中，页面中显示当天日期**今天是2019年7月25日
-
-```
-<script type="text/javascript">
-
-	
-var today;
-
-today=new Date( );
-
-document.write("今天是"+today.getFullYear( )+"年"
-
-        +(today.getMonth( )+1)+"月"+today.getDate( )+"日");
-
-</script>
-```
-
-
-
-
-
-# 6.JS继承（work）
+# 7.JS继承（work）
 
 JS是面向对象的弱类型语言，继承也是其非常强大的特性之一。
 
@@ -2077,10 +3296,9 @@ console.log(tom.features); // ['eat']
 console.log(kissy.features); // ['eat']
 ```
 
-
+原因分析：
 
 ```
-原因分析：
 关键点：属性查找过程
 
 执行tom.features.push，首先找tom对象的实例属性（找不到），
@@ -2092,7 +3310,258 @@ features属性中插入值。
 
 
 
-# 7.js里==和===
+
+
+#  8.jQuery 
+
+
+
+## jQuery vs JavaScript 
+
+jQuery 由 John Resig 于 2006 年创建。它旨在处理浏览器不兼容性并简化 HTML DOM 操作、事件处理、动画和 Ajax。
+
+十多年来，jQuery 一直是世界上最受欢迎的 JavaScript 库。
+
+但是，在 JavaScript Version 5（2009）之后，大多数 jQuery 实用程序都可以通过几行标准 JavaScript 来解决：
+
+
+
+## DOM 选择器
+
+#### 1.通过 id 来查找 HTML 元素
+
+返回 id="intro" 的元素：
+
+#### jQuery
+
+```
+var myElement = $("#id01");
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/jquery/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>通过 id 查找 HTML 元素</h1>
+
+<p id="id01">Hello World!</p>
+<p id="id02">Hello China!</p>
+<p id="id03">Hello Shanghai!</p>
+
+<p id="demo"></p>
+
+        <script>
+        $(document).ready(function() {
+          var myElements = $("#id03");
+          $("#demo").text("段落 id03 的文本是：" + myElements[0].innerHTML);
+        });
+        </script>
+
+</body>
+</html>
+
+//结果：
+//通过 id 查找 HTML 元素
+Hello World!
+Hello China!
+Hello Shanghai!
+段落 id03 的文本是：Hello Shanghai!
+
+
+```
+
+#### JavaScript
+
+
+
+```
+var myElement = document.getElementById("id01");
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>通过 id 查找 HTML 元素</h1>
+
+<p id="id01">Hello World!</p>
+<p id="id02">Hello China!</p>
+<p id="id03">Hello Shanghai!</p>
+
+<p id="demo"></p>
+
+        <script>
+        var myElement = document.getElementById("id03");
+        document.getElementById("demo").innerHTML = "段落 id03 的文本是：" + myElement.innerHTML;
+        </script>
+
+</body>
+</html>
+
+
+```
+
+
+
+
+
+## 2.通过标签名来查找 HTML 元素
+
+返回所有 <p> 元素：
+
+### jQuery
+
+```
+var myElements = $("p");
+```
+
+### 实例
+
+```
+var myElements = document.getElementsByTagName("p");
+```
+
+## 3.通过类名来查找 HTML 元素
+
+返回 class="intro" 的所有元素。
+
+### jQuery
+
+```
+var myElements = $(".intro");
+```
+
+### JavaScript
+
+```
+var myElements = document.getElementsByClassName("intro");
+```
+
+按类名查找元素在 Internet Explorer 8 和早期版本中不起作用。
+
+## 通过 CSS 选择器查找 HTML 元素
+
+返回包含 class="intro" 的所有 <p> 元素的列表。
+
+### jQuery
+
+```
+var myElements = $("p.intro");
+```
+
+### JavaScript
+
+```
+var myElements = document.querySelectorAll("p.intro");
+```
+
+querySelectorAll() 方法在 Internet Explorer 8 和早期版本中不起作用。
+
+
+
+
+
+## jq-HTML 元素
+
+
+
+```
+### 1设置文本内容
+
+设置 HTML 元素的内部文本：
+
+jQuery
+myElement.text("Hello China!");
+
+JavaScript
+myElement.textContent = "Hello China!";
+
+
+### 2获取文本内容
+
+获取 HTML 元素的内部文本：
+ jQuery
+var myText = myElement.text();
+JavaScript
+var myText = myElement.textContent || myElement.innerText;
+
+### 3设置 HTML 内容
+
+设置元素的 HTML 内容：
+jQuery
+var myElement.html("<p>Hello World</p>");
+JavaScript
+var myElement.innerHTML = "<p>Hello World</p>";
+
+
+#### 获取 HTML 内容
+
+获取元素的 HTML 内容：
+ jQuery
+var content = myElement.html();
+JavaScript
+var content = myElement.innerHTML;
+
+```
+
+
+
+
+
+## JavaScript / jQuery CSS 样式
+
+```
+
+
+隐藏 HTML 元素
+隐藏一个 HTML 元素：
+jQuery
+myElement.hide();
+JavaScript
+myElement.style.display = "none";
+
+
+显示 HTML 元素
+显示一个 HTML 元素：
+jQuery
+myElement.show();
+JavaScript
+myElement.style.display = "";
+
+样式化 HTML 元素
+更改 HTML 元素的字体尺寸：
+jQuery
+myElement.css("font-size","35px");
+JavaScript
+myElement.style.fontSize = "35px";
+```
+
+
+
+## javaScript / jQuery HTML DOM
+
+```
+删除元素
+删除 HTML 元素：
+jQuery
+$("#id").remove();
+JavaScript
+element.parentNode.removeChild(element);
+
+获取父元素
+返回 HTML 元素的父元素：
+jQuery
+var myParent = myElement.parent();
+JavaScript
+var myParent = myElement.parentNode;
+```
+
+
+
+
+
+# == & ===
 
 
 
@@ -2110,22 +3579,5 @@ features属性中插入值。
 3、基础类型与高级类型，==和===是有区别的
 
 对于==，将高级转化为基础类型，进行“值”比较，因为类型不同，===结果为false
-
-# 8.应用题
-
-
-
-实现代码：
-
-```
-
-
-var arr = [2,3,4,5,6];
-var sum =0;
-for (var i = 1; i <= arr.length; i++) {
-	sum+= arr[i];
-}
-console.log(sum);
-```
 
 

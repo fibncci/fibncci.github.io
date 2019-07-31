@@ -1,28 +1,16 @@
-```
+---
 目前常用的命令：
-
 Last login: Sun Jul 21 21:50:39 on ttys000
-
 (base) tianmini-2:~ tianzi$ ls
-
 cd Documents 
-
-cd feibo2011.github.io/
+cd fibncci..github.io/
 
 git diff
-
 git status
-
 git add .
-
 git commit -m 'fibonacci'
-
 git push origin master。上传
-
-
-```
-
-
+---
 
 
 
