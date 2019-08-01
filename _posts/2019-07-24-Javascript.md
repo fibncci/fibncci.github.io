@@ -39,7 +39,7 @@ javascript!
 
 16.位置和事件对象
 
-17.对戏哦昂应用event应用
+17.应用event应用
 
 18.js表单
 
@@ -3556,6 +3556,293 @@ var myParent = myElement.parent();
 JavaScript
 var myParent = myElement.parentNode;
 ```
+
+
+
+
+
+
+
+
+
+# 9.Bootstrap
+
+## 什么是 Bootstrap？
+
+Bootstrap 是一个用于快速开发 Web 应用程序和网站的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的。
+
+## 历史
+
+Bootstrap 是由 *Twitter* 的 *Mark Otto* 和 *Jacob Thornton* 开发的。Bootstrap 是 2011 年八月在 GitHub 上发布的开源产品。
+
+## 为什么使用 Bootstrap？
+
+- **移动设备优先**：自 Bootstrap 3 起，框架包含了贯穿于整个库的移动设备优先的样式。
+
+- 浏览器支持
+
+  ：所有的主流浏览器都支持 Bootstrap。
+
+- **容易上手**：只要您具备 HTML 和 CSS 的基础知识，您就可以开始学习 Bootstrap。
+
+- 响应式设计
+
+  ：Bootstrap 的响应式 CSS 能够自适应于台式机、平板电脑和手机。
+
+  Bootstrap 响应式设计
+
+- 它为开发人员创建接口提供了一个简洁统一的解决方案。
+
+- 它包含了功能强大的内置组件，易于定制。
+
+- 它还提供了基于 Web 的定制。
+
+- 它是开源的。
+
+## Bootstrap 包的内容
+
+- **基本结构**：Bootstrap 提供了一个带有网格系统、链接样式、背景的基本结构。这将在 **Bootstrap 基本结构** 部分详细讲解。
+
+- **CSS**：Bootstrap 自带以下特性：全局的 CSS 设置、定义基本的 HTML 元素样式、可扩展的 class，以及一个先进的网格系统。这将在 **Bootstrap CSS** 部分详细讲解。
+
+- **组件**：Bootstrap 包含了十几个可重用的组件，用于创建图像、下拉菜单、导航、警告框、弹出框等等。这将在 **布局组件** 部分详细讲解。
+
+- JavaScript 插件
+
+  ：Bootstrap 包含了十几个自定义的 jQuery 插件。您可以直接包含所有的插件，也可以逐个包含这些插件。这将在
+
+   
+
+  Bootstrap 插件
+
+  
+
+  
+
+- 定制
+
+  ：您可以定制 Bootstrap 的组件、LESS 变量和 jQuery 插件来得到您自己的版本。
+
+  
+
+------
+
+## 在线实例
+
+本站的 Bootstrap 教程包含了上百个实例。
+
+你可以使用我们的在线编辑器在线编辑代码，并点击运行按钮查看结果。
+
+## Bootstrap 实例
+
+
+
+---------------------------------------------
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>我的第一个 Bootstrap 页面</h1>
+    <p>重置窗口大小，查看响应式效果！</p> 
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>学的不仅是技术，更是梦想！</p>
+      <p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>学的不仅是技术，更是梦想！</p>
+      <p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3> 
+      <p>学的不仅是技术，更是梦想！</p>
+      <p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
+    </div>
+  </div>
+</div>
+
+
+
+```html
+<div class="container">
+  <div class="jumbotron">
+    <h1>我的第一个 Bootstrap 页面</h1>
+    <p>重置窗口大小，查看响应式效果！</p> 
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>学的不仅是技术，更是梦想！</p>
+      <p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>学的不仅是技术，更是梦想！</p>
+      <p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3> 
+      <p>学的不仅是技术，更是梦想！</p>
+      <p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
+    </div>
+  </div>
+</div>
+```
+
+
+
+## -------------------
+
+## Bootstrap 实例2
+
+<div class="table-responsive">          
+ <table class="table table-striped table-bordered">
+   <thead>
+     <tr>
+       <th>#</th>
+       <th>Name</th>
+       <th>Street</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>1</td>
+       <td>Anna Awesome</td>
+       <td>Broome Street</td>
+     </tr>
+     <tr>
+       <td>2</td>
+       <td>Debbie Dallas</td>
+       <td>Houston Street</td>
+     </tr>
+     <tr>
+       <td>3</td>
+       <td>John Doe</td>
+       <td>Madison Street</td>
+     </tr>
+   </tbody>
+ </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 10.JSON 教程
+
+------
+
+JSON: **J**ava**S**cript **O**bject **N**otation(JavaScript 对象表示法)
+
+JSON 是存储和交换文本信息的语法。类似 XML。
+
+JSON 比 XML 更小、更快，更易解析。
+
+##  JSON ？
+
+- JSON 指的是 JavaScript 对象表示法（**J**ava**S**cript **O**bject **N**otation）
+- JSON 是轻量级的文本数据交换格式
+- JSON 独立于语言：JSON 使用 Javascript语法来描述数据对象，但是 JSON 仍然独立于语言和平台。JSON 解析器和 JSON 库支持许多不同的编程语言。 目前非常多的动态（PHP，JSP，.NET）编程语言都支持JSON。
+- JSON 具有自我描述性，更易理解
+
+------
+
+## JSON - 转换为 JavaScript 对象
+
+JSON 文本格式在语法上与创建 JavaScript 对象的代码相同。
+
+由于这种相似性，无需解析器，JavaScript 程序能够使用内建的 eval() 函数，用 JSON 数据来生成原生的 JavaScript 对象。
+
+
+
+
+
+
+
+
+
+### JSON - 简介
+
+
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+<h2>JavaScript 创建 JSON 对象</h2>
+<p>
+网站名称: <span id="jname"></span><br /> 
+网站地址: <span id="jurl"></span><br /> 
+网站 slogan: <span id="jslogan"></span><br /> 
+</p>
+<script>
+var JSONObject= {
+    "name":"菜鸟教程",
+    "url":"www.runoob.com", 
+    "slogan":"学的不仅是技术，更是梦想！"
+};
+document.getElementById("jname").innerHTML=JSONObject.name 
+document.getElementById("jurl").innerHTML=JSONObject.url 
+document.getElementById("jslogan").innerHTML=JSONObject.slogan
+</script>
+ 
+</body>
+</html>
+```
+
+
+
+
+
+与 XML 相同之处
+
+- JSON 是纯文本
+- JSON 具有"自我描述性"（人类可读）
+- JSON 具有层级结构（值中存在值）
+- JSON 可通过 JavaScript 进行解析
+- JSON 数据可使用 AJAX 进行传输
+
+------
+
+## 与 XML 不同之处
+
+- 没有结束标签
+- 更短
+- 读写的速度更快
+- 能够使用内建的 JavaScript eval() 方法进行解析
+- 使用数组
+- 不使用保留字
+
+------
+
+## 为什么使用 JSON？
+
+对于 AJAX 应用程序来说，JSON 比 XML 更快更易使用：
+
+#### 使用 XML
+
+- 读取 XML 文档
+- 使用 XML DOM 来循环遍历文档
+- 读取值并存储在变量中
+
+#### 使用 JSON
+
+- 读取 JSON 字符串
+- 用 eval() 处理 JSON 字符串
 
 
 
