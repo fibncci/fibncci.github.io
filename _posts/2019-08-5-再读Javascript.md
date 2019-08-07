@@ -57,6 +57,13 @@ javascript!
 
 
 
+```
+在python和javascript中，调用必须return
+段落<p>和标题<h1>。以及正文中都是<
+```
+
+
+
 
 
 # 1.概念
