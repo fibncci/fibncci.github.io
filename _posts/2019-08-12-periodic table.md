@@ -1,68 +1,9 @@
 ---
 layout: post
-title: "每日心得-js&&元素周期表"
+title: "元素周期表"
 date: 2019-08-12
 tag: 学习
 ---
-
-
-
-# 今日收获
-
-#### js 中引入外部文件
-
-**必须**需要写`<script src = "1.js"></script>`    ;
-
-同样也可以显示外部调用的函数，只需要在同一个文件夹下面就可以了。
-
-你可以将脚本放置于` <head>` 或者` <body>`中，放在` <script> `标签中的脚本与外部引用的脚本运行效果完全一致。
-
-
-
-#### JavaScript 可以通过不同的方式来输出数据：（写在script中）
-
-- 使用 **window.alert()** 弹出警告框。					
-
-- ```
-  你可以弹出警告框来显示数据：
-  ```
-
-  
-
-- 使用  **document.write()** 方法将内容写到 HTML 文档中
-
-```
-
-document.write() 方法可以用在两个方面：
- 1、 页面载入过程中用实时脚本创建页面内容，用来追加一些标签。
- 2、清除当前页面内容(包括源文档的任何变量或值)。重新生成内容。
-		在清除全部页面内容，然后生成新的内容，即“覆盖文档"。
-```
-
-
-
-- 使用 **innerHTML** 写入到 HTML 元素。
-
-```
-<script>
-document.getElementById("demo").innerHTML = "段落已修改。";
-</script>
- document.getElementById(id) 方法
-请使用 "id" 属性来标识 HTML 元素，并 innerHTML 来获取或插入元素内容
-只是替换了 id 为 three 里的内容，没有覆盖页面。
-```
-
-
-
-- 使用 **console.log()** 写入到浏览器的控制台。
-
-```
-浏览器中使用 F12 来启用调试模式， 在调试窗口中点击 "Console" 菜单。
-```
-
-
-
-Date()显示时间Mon Aug 12 2019 10:51:41 GMT+0800 (中国标准时间)
 
 
 
@@ -72,7 +13,7 @@ Date()显示时间Mon Aug 12 2019 10:51:41 GMT+0800 (中国标准时间)
 
 ##  
 
-
+第一张图用typora可以显示。哎，没办法，解析器不同-----
 
 <div align="center">
 　　<img src="../images/image/periodic table.png" height="500" width="1200" />
