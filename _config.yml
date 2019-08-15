@@ -5,8 +5,8 @@ description: fibonacci
 # 头像里面的标题
 avatarTitle: wangdu
 # 头像里面的描述
-avatarDesc: wangdu007
-url: "https://feibo2011.github.io"
+avatarDesc: web / 机器学习
+url: "https://fibncci.github.io"
 
 # Comment
 comment:
@@ -17,12 +17,12 @@ comment:
 # Social
 social:
     weibo: feibo2011
-    github: feibo2011
+    github: fibncci
     # zhihu: panpanleopard
     # juejin: xxx
     #jianshu: 2ada30d8d0f7
     # twitter:
-    mail: pc554328955@163.com
+    mail: pc554328955@gmail.com
 
 
 # 百度统计
@@ -78,3 +78,7 @@ paginate: 20
 paginate_path: "page/:num/"
 
 theme: jekyll-theme-merlot
+
+
+
+
