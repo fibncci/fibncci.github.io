@@ -3,22 +3,47 @@
 <head>
 	<title>love you</title>
 
+<article>
+  <h1>旺度</h1>
+  <p> 本网站于2019年开始访问</p>
+</article>
+<aside>
+  <h4>你是谁</h4>
+  <p>我是谁.</p>
+</aside>
 
-	<a href= 'http://www.baidu.com'>百度呀</a>
-	<a href = '../images/favicon.png'>清华=本地打开</a>
+
+
+<audio controls>
+  <source src="../images/posts/music/Son doll.mp3" >
+  <source src="/images/posts/music/Son doll.mp3" >
+听吧。
+</audio>
+	<!-- 第一种跳转 -->
+	<a href= 'http://www.baidu.com'><b>百度呀</b>></a> 
+	<a href = '../images/favicon.png'><strong>清华=本地打开</strong>></a>
 	<a href = '/images/favicon.png'>清华=联网打开</a> 
+
+	<!-- 第二种跳转 -->
+	<form action="http://www.baidu.com" method="post">
+		<button>随便点</button>
+	</form>
+
+	<!--第三种子窗口 -->
+	
+	<a href="http://www.baidu.com" target="frame">获取数据</a>
+	<iframe src="" name="frame" frameborder="0"></iframe>
 
 
 	<style>
 
         #re{
-            width:800px;
-            height:800px;
+            width:444px;
+            height:444px;
             background:#8b0000;
         }
 	</style>
 	
-
 	<p>hi1</p>
 
 <hr />
@@ -32,7 +57,74 @@
 	<p>hi1</p>
 </head>
 <body>
-    <div id = 're' onclick = "alert('点啊')"></div>
+    <!-- <div id = 're' onclick = "alert('点啊')"></div> -->
+    <div id = 're' >  </div>
+	<button>鼠标移入</button>
+	<button>鼠标移出</button>
+
+	<script src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>
+
+
+    <script type="text/javascript">
+    	
+			// var bg = $('#re').css('background-color');
+			//必须要将样式名写全才行
+			// alert(bg)
+
+			//绑定事件
+			// $('#re').click(function(){
+			// 	alert('乱点啥呀')
+			// })
+
+//方式二
+			$('#re').bind('mouseover',function(){
+				$(this).css('background','blue'); //单词能写错--
+			});
+
+
+		//事件解绑
+			var btns = $('button');
+			// alert(btns.length)
+
+			//第一个按钮绑定  $('button:eq(4)')   $('button').eq(4)
+ 			btns.eq(1).click(function(){
+ 				$('#test').bind('mouseover', function(){
+ 					$(this).css('background','orange');
+ 				});
+
+ 				$('#test').bind('mouseout', function(){
+ 					$(this).css('background','yellowgreen');
+ 				});
+ 			});
+
+ 			// //第二个按钮
+ 			// btns.eq(2).click(function(){
+ 			// 	$('#test').unbind('mouseover');
+ 			// 	$('#test').unbind('mouseout');
+ 			// });
+
+
+
+
+
+
+		
+    </script>
+
+
+    <script >
+    	var qt=  document.getElementById('re');
+
+		//绑定鼠标移入事件
+		qt.onmouseover = function(){
+			
+				// alert('烟笼寒水雾浓软，秦淮风姿而今还')
+				
+			}
+			
+    </script>
+
+
 	<p>The <abbr title="duwang duwang">DUDU</abbr> 厦门啊</p>
 	怎么办<acronym title="jie ie e">JIE</acronym>?
 	
