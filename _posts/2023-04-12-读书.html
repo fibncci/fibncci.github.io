@@ -56,9 +56,15 @@
 	<p>hi1</p>
 	<p>hi1</p>
 </head>
+
+
+
+
 <body>
     <!-- <div id = 're' onclick = "alert('点啊')"></div> -->
     <div id = 're' >  </div>
+    <div id="show"></div>
+
 	<button>鼠标移入</button>
 	<button>鼠标移出</button>
 
@@ -148,6 +154,37 @@
 		console.log('学习吧，亲')
 
 	</script>
+
+
+
+<!-- 这儿对应的是 时间显示<div id="show"></div> -->
+
+	<script>
+    // var show = document.getElementById('show');
+    var weeks = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+
+
+    function setTime () {
+        var time = new Date();
+        var year = time.getFullYear();
+        var month = fillZero(time.getMonth() + 1);
+        var day = fillZero(time.getDate());
+        var h = fillZero(time.getHours());
+        var m = fillZero(time.getMinutes());
+        var s = fillZero(time.getSeconds());
+        var w = weeks[time.getDay()];
+        show.innerHTML = year + '年' + month + '月' + day + '日 ' + h + ':' + m + ':' + s + ' ' + w;
+    }
+
+
+    function fillZero (i) {
+        return i = i < 10 ? '0' + i : i;
+    }
+    setTime();
+    setInterval(function () {
+        setTime();
+    }, 1000)
+</script>
 	
 </body>
 </html>
