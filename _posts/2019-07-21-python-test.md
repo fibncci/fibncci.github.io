@@ -2,7 +2,7 @@
 layout: post
 title: "python练习 字典列表集合"
 date: 2019-07-21
-tag: 学习
+tag: lang
 ---
 
 
