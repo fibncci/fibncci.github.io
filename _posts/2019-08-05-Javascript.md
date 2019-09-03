@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "    javascript!     "
+title: "javascript!"
 date: 2019-08-09
 tag: 学习
 ---
