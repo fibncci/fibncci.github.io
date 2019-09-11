@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "数据分析方法"
-date: 2019-09-05
+title: "AppleScript-很不错的脚本工具"
+date: 2019-09-10
 tag: da
 ---
 
@@ -9,7 +9,19 @@ tag: da
 
 
 
-## AppleScript-jsx
+## AppleScript
+
+
+
+非程序员用的，这个比较低端；
+
+用于生产环境下，才是最适合的！
+
+```
+ Apple Script
+苹果(Apple)的剧本
+jsx
+```
 
 首先了解一下 Apple 公司创造 AppleScript 的初衷，它是用来编写运行于mac的脚本的。重要的是它是 mac 上操作应用程序为数不多的途径之一。
 
@@ -32,6 +44,10 @@ ScriptEditor；MacOS 上有自带的脚本编辑器，目前支持 AppleScript �
 AppleScript有4种最基本的数据类型：number、string、list和record；数值、字符串、数组和字典。
 
 **number 类型**
+
+
+
+n.scpt 文件的名字
 
 ```applescript
 set x to 2
@@ -75,7 +91,7 @@ output :1234
 
 **list 类型**
 
-```
+```jsx
 set firstList to { 100, 200.0, "djfif", -10 }
 set emptyList to {}
 set currentList to { 2, 3, 4, 5 }
@@ -142,7 +158,7 @@ output:2
 
 **条件/循环**
 
-```
+```jsxj s
 set x to 500
 
 if x > 100 then
@@ -366,7 +382,7 @@ x>100
 
   mail.scpt文件名
 
-  ```scpt
+  ```jsx
   --Variables
   set recipientName to " 小红"
   set recipientAddress to "aliyunzixun@xxx.com"
@@ -408,7 +424,7 @@ x>100
 
 - 让浏览器打开网页
 
-  ```
+  ```jsx
   set urlMyBlog to "https://blog.csdn.net/sodaslay"
   set urlChinaSearch to "http://www.chinaso.com"
   set urlBiying to "https://cn.bing.com"
@@ -427,6 +443,28 @@ x>100
         --将焦点由最后一个打开的标签页还给首个标签页
         set active tab index of window1 to 1
     end tell
+  end tell
+  
+  
+  --打开浏览器
+  set urlMyBlog to "https://www.baidu.com"
+  set urlChinaSearch to "https://fibncci.github.io/about/"
+  set urlBiying to "https://fibncci.github.io/2019/09/5G/"
+  
+  --使用Chrome浏览器
+  tell application "Google Chrome"
+  	--新建一个chrome窗口
+  	set window1 to make new window
+  	tell window1
+  		--就是百度哈哈
+  		set currTab to active tab of window1
+  		set URL of currTab to urlBiying
+  		--打开csdn博客,搜索
+  		make new tab with properties {URL:urlMyBlog}
+  		make new tab with properties {URL:urlChinaSearch}
+  		--将焦点由最后一个打开的标签页还给首个标签页
+  		set active tab index of window1 to 1
+  	end tell
   end tell
   ```
 
@@ -625,6 +663,10 @@ sdef /Applications/Mail.app | sdp -fh -o ~/Desktop --basename Mail --bundleid `d
 
 
 ## 他山之石
+
+总结：可以做一个软件窗口，给主程序加一个快捷方式，这样一个软件就做好了；很棒。
+
+
 
 ```
 

@@ -13,6 +13,13 @@ tag: ml
 
 ## 统计学期末考试
 
+```
+Statistics - statistical learning methods
+统计学-			统计		学习			方法
+```
+
+
+
 参考地址：
 
 http://note.youdao.com/noteshare?id=a268cbd3de1d4341e016798a64976aa0
