@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "机器学习-Game"
+title: "机器学习-competitions"
 date: 2019-09-05
 tag: ml
 ---
@@ -124,27 +124,17 @@ https://tianchi.aliyun.com/course/video?spm=5176.12586971.1001.1.61376448KdAkgB&
 
 
 
-## Kaggle
+## kaggle competitions
 
-![](/images/posts/ml/kaggle.png)
+![竞赛](/images/posts/ml/kaggle.png)
 
 > ![](../images/posts/ml/kaggle.png)
 >
 > 由墨尔本大学的Anthony Goldbloom创办，是最早的大数据竞赛平台，拥有庞大的技术分享社区和众多开元代码，面向全球用户；产品2010年上线，累计举办竞赛260+个（含练习赛和自办赛），注册用户数20W+。
 
-- 官方网址：https://www.kaggle.com/
 
-- 开放数据集：https://www.kaggle.com/datasets
 
-- 《[Kaggle Competition Past Solutions](http://www.chioka.in/kaggle-competition-solutions/)》by log0
-
-- 《[Winning solutions of kaggle competitions](https://www.kaggle.com/sudalairajkumar/winning-solutions-of-kaggle-competitions)》by SRK 
-
-- [Kaggle 项目实战（教程）](https://github.com/apachecn/kaggle) by [ApacheCN](http://www.apachecn.org)
-
-- **[Kaggle Past Solutions](http://ndres.me/kaggle-past-solutions/)**
-
-  > Sortable and searchable compilation of solutions to past Kaggle competitions.
+Sortable and searchable compilation of solutions to past Kaggle competitions.
 
 下表只列出过去半年内active的competitons，并且按照recently created排序。
 
@@ -346,3 +336,24 @@ SODA | 数据嗨客 | 竞技乎 | 知数学院 | 第三届数据新闻比赛
 
 
 ## 他山之石
+
+```yml
+kaggle
+官方网址：https://www.kaggle.com/
+
+开放数据集：
+https://www.kaggle.com/datasets
+
+Kaggle Competition Past Solutions=Kaggle竞争过去的解决方案
+http://www.chioka.in/kaggle-competition-solutions/
+
+Winning solutions of kaggle competitions=卡格尔竞赛获奖方案SRK https://www.kaggle.com/sudalairajkumar/winning-solutions-of-kaggle-competitions
+
+Kaggle 项目实战（教程）
+https://github.com/apachecn/kaggle
+ApacheCN:http://www.apachecn.org
+
+Kaggle过去的解决方案
+http://ndres.me/kaggle-past-solutions/
+```
+
