@@ -39,7 +39,7 @@ jsx
 ScriptEditor；MacOS 上有自带的脚本编辑器，目前支持 AppleScript 和 JavaScript。
 其中有模版工程、模版代码、应用词典等功能，极大方便了 AppleScript/JavaScript 脚本的编写。
 
-## **语法**
+## 语法
 
 AppleScript有4种最基本的数据类型：number、string、list和record；数值、字符串、数组和字典。
 
