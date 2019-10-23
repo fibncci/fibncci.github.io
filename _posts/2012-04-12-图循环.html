@@ -18,7 +18,7 @@
             width: 1500px;
             height: 700px;
             border: 1px solid #CCC;
-            margin: 0 auto;
+            margin: 0 auto; 
             margin-top: 120px;
             position: relative;
 
@@ -78,7 +78,7 @@
         }
         #lun>#left{
             left: 0;
-        }
+        }   `
         #lun>#right{
             right: 0;
         }
@@ -90,7 +90,7 @@
     <ul>
 
 
-         <li class="active"><img src="/images/favicon.png" alt=""></li>
+    <!--      <li class="active"><img src="/images/favicon.png" alt=""></li>
         <li><img src="/images/image/modules.jpg" alt=""></li>
         <li><img src="/images/image/non relational database.png" alt=""></li>
         <li><img src="/images/image/关系型数据库.png" alt=""></li>
@@ -101,23 +101,18 @@
         <li><img src="/images/image/MySQL-慢查询配置.png" alt=""></li>
         <li><img src="/images/image/MySQL-B-Tree 索引.png" alt=""></li>
 
-
-
-
-<!-- 
-        <li class="active"><img src="../images/favicon.png" alt=""></li>
-        <li><img src="../images/image/modules.jpg" alt=""></li>
-        <li><img src="../images/image/non relational database.png" alt=""></li>
-        <li><img src="../images/image/关系型数据库.png" alt=""></li>
-        <li><img src="../images/image/聊天室.png" alt=""></li>
-        <li><img src="../images/image/冒泡/捕获.png" alt=""></li>
-        <li><img src="../images/image/手写识别.png" alt=""></li>
-        <li><img src="../images/image/MySQL- B+Tree索引.png" alt=""></li>
-        <li><img src="../images/image/MySQL-慢查询配置.png" alt=""></li>
-        <li><img src="../images/image/MySQL-B-Tree 索引.png" alt=""></li>     
-
  -->
-     
+
+
+        <li><img src="../images/posts/sork/641二分查找.jpeg"></li>
+        <li><img src="../images/background-cover.jpg" ></li>
+        <li><img src="../images/posts/git/git速查表.jpg" ></li>
+        <li><img src="../images/posts/sork/快排3.png" ></li>
+        <li><img src="../images/posts/sork/冒泡排序.png" ></li>
+        <li><img src="../images/posts/sork/快排-指针在两边-子集的划分.png" ></li>
+        <li><img src="../images/posts/sork/641-1.png" ></li>
+        
+        
 
     </ul>
 
@@ -162,7 +157,7 @@
             }
             lis[index].setAttribute('class', 'active');
             cLis[index].setAttribute('class', 'active-list');
-        }, 2000)
+        }, 1000)
     }
     autoRun();
     lun.onmouseenter = function () {
@@ -173,6 +168,8 @@
     }
     for (var i = 0; i < cLis.length; i++) {
         cLis[i].onmouseover = (function (i) {
+
+            //数据持久化，用闭包==实用 自执行函数
             return function () {
                 lis[index].removeAttribute('class');
                 cLis[index].removeAttribute('class');
@@ -204,5 +201,11 @@
         cLis[index].setAttribute('class', 'active-list');
     }
 
+
+
+
 </script>
+<div>
+    熟悉的小脚丫，慢慢走
+</div>
 </html>
