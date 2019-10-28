@@ -361,6 +361,7 @@
     function maopao(){
         for (var i=0 ;i<arr.length;i++) {
             for (var j= 0;j<arr.length;j++)
+              //arr.length-i-1
                 if (arr[j]>arr[j+1]){
                     arr[j] ^= arr[j+1]
                     arr[j+1] ^= arr[j]
@@ -491,6 +492,67 @@
       ```
 
 2.  整数number 字符串string  布尔boolean  未定义undefined  null  
+
+
+
+
+
+
+
+## 准备
+
+请使用 插入排序法对数组进行排序,  数组:  [5,2,8,3,7,9,4]
+
+```js
+//分析先把 2拿出来，与5做比较， 2 5 ；
+//再拿出8与 5 分别比较，放在5的后面 2 5 8
+//再取3 与2比较 与5比较，放在中间  2 3 5 8
+
+function cr(){
+	var j=1 
+	var i=0
+	if (num[i]>num[j]) {
+		num[j] ^= num[i],num[i] ^= num[j],num[] ^= num[j]
+	}
+    for(var j=1; j< num.length;j++){
+      if(num[j-1] > num[j]  ){
+      	for(var i=0;i<j;i++ ){
+      		if (num[i]< num[j] && num[i+1]>num[j]) {
+      			num[i+1] ^= num[j], num[j] ^= num[i+1], num[i+1] ^= num[j] 
+      		}
+      	}
+      }
+	}
+	return num
+}
+var num =  [5,2,8,3,7,9,4]
+console.log(cr(num))
+------------------------------------------------------------
+console.time()
+function insertionSort(arr) {
+    var len = arr.length;
+    var preIndex, current;
+    for (var i = 1; i < len; i++) {
+        preIndex = i - 1;
+        current = arr[i];
+        while (preIndex >= 0 && arr[preIndex] > current) {
+            arr[preIndex + 1] = arr[preIndex];
+            preIndex--;
+        }
+        arr[preIndex + 1] = current;
+    }
+    return arr;
+}
+
+console.log(insertionSort([5,2,8,3,7,9,4]))
+
+console.timeEnd()
+// [ 2, 3, 4, 5, 7, 8, 9 ]
+// default: 3.873ms
+// [Finished in 0.1s]
+```
+
+
 
 
 
