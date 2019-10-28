@@ -1,183 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>love you</title>
-
-<article>
-  <h1>旺度</h1>
-  <p> 本网站于2019年开始访问</p>
-</article>
-<aside>
-  <h4 onclick="this.innerHTML = '神'">你是谁</h4>
-  <p>我是谁.</p>
-</aside>
-
-<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Y1ZWV1BRW1pWViMSEk0ADA4" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png"/></a>
-<!-- 01  02 21 -->
-
-
-
-<audio controls>
-  <source src="/images/posts/Sound/Son doll.mp3" >
-  <source src="../images/posts/Sound/Son doll.mp3" >
-  	
-<!-- 听吧。 -->
-</audio>
-	<!-- 第一种跳转 -->
-	<a href= 'http://www.baidu.com'><b>百度呀</b>></a> 
-	<a href = '../images/favicon.png'><strong>清华=本地打开</strong>></a>
-	<a href = '/images/favicon.png'>清华=联网打开</a> 
-
-	<!-- 第二种跳转 -->
-	<form action="http://www.baidu.com" method="post">
-		<button>随便点</button>
-	</form>
-
-	<!-- 第2-2种模拟百度跳转-->
-
- <form action ="http://www.baidu.com/s">
-        <input type=text name="wd">
-        <input type="submit" value="百度一下">
-</form>
-
-<!-- 第2-3种模拟google跳转-->
- <form action ="https://www.google.com/search">
-        <input type=text name="q">
-        <input type="submit" value="google一下">
-</form>
-
-
-	<!--第三种子窗口 -->
-	
-	<a href="http://www.baidu.com" target="frame">获取数据</a>
-	<iframe src="" name="frame" frameborder="0"></iframe>
-
-
-	<style>
-
+    <meta charset="UTF-8">
+    <title>love you</title>
+    <style>
         #re{
             width:444px;
             height:444px;
             background:#8b0000;
         }
-	</style>
-	
-	<p>hi1</p>
-
-
-<hr> <!--一样的呀 -->
-	<p>hi1</p>
-<hr />
-	<p>hi1</p>
+    </style>
 </head>
-
-
-
-
 <body>
-    <!-- <div id = 're' onclick = "alert('点啊')"></div> -->
-    <div id = 're' >  </div>
-    <div id="show"></div>
 
-	<button>鼠标移入</button>
-	<button>鼠标移出</button>
+<article>
+    <h1>旺度</h1>
+    <kbd>本网站于2019年开始访问</kbd>
+</article>
 
-	<script src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>
+<aside>
+    <h4 onclick="this.innerHTML = '神'">你是谁</h4>
+</aside>
 
+<!-- 听吧。 -->
+<audio controls>
+    <source src="/images/posts/Sound/Son doll.mp3" >
+    <!-- 这儿会有console的报错。找不到文件 -->
+    <source src="../images/posts/Sound/Son doll.mp3" >
+</audio>
 
-    <script type="text/javascript">
-    	
-			// var bg = $('#re').css('background-color');
-			//必须要将样式名写全才行
-			// alert(bg)
+<!-- 第一种跳转 -->
+<a href= 'http://www.baidu.com'><b>打开百度</b>></a>
+<a href = '../images/favicon.png'>
+    <strong>清华=本地打开</strong></a>
+<a href = '/images/favicon.png'>清华=联网打开</a>
 
-			//绑定事件
-			// $('#re').click(function(){
-			// 	alert('乱点啥呀')
-			// })
+<!-- 第二种跳转 -->
+<form action="http://www.baidu.com" method="post">
+    <button>随便点</button>
+</form>
 
-//方式二
-			// $('#re').bind('mouseover',function(){
-			// 	$(this).css('background','blue'); 
-			// });
+<!-- 第2-2种模拟百度跳转-->
 
+<form action ="http://www.baidu.com/s">
+    <input type=text name="wd">
+    <input type="submit" value="百度一下">
+</form>
 
-		//事件解绑
-			// var btns = $('button');
-			// alert(btns.length)
+<!-- 第2-3种模拟google跳转-->
+<form action ="https://www.google.com/search">
+    <input type=text name="q">
+    <input type="submit" value="google一下">
+</form>
 
-			//第一个按钮绑定  $('button:eq(4)')   $('button').eq(4)
- 			// btns.eq(1).click(function(){
- 			// 	$('#test').bind('mouseover', function(){
- 			// 		$(this).css('background','orange');
- 			// 	});
+<!-- 给我写信 -->
+<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Y1ZWV1BRW1pWViMSEk0ADA4" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png"/></a>
+<!-- 01  02 21 -->
 
- 			// 	$('#test').bind('mouseout', function(){
- 			// 		$(this).css('background','yellowgreen');
- 			// 	});
- 			// });
+<br>
+<!--第三种子窗口 -->
+<a href="http://www.baidu.com" target="frame">获取数据</a>
+<iframe src="" name="frame" frameborder="0">
+</iframe>
 
- 			// //第二个按钮
- 			// btns.eq(2).click(function(){
- 			// 	$('#test').unbind('mouseover');
- 			// 	$('#test').unbind('mouseout');
- 			// });
-
-
-
-
-
-
-		
-    </script>
-
-
-    <script >
-    	var qt=  document.getElementById('re');
-
-		//绑定鼠标移入事件
-		qt.onmouseover = function(){
-			
-				// alert('烟笼寒水雾浓软，秦淮风姿而今还')
-				
-			}
-			
-    </script>
-
-
-	<p>The <abbr title="duwang duwang">DUDU</abbr> 厦门啊</p>
-	怎么办<acronym title="jie ie e">JIE</acronym>?
-	
-	<address>
-		位置 <a href="mailto:pc554328955@gmail.com">旺度</a>.<br> 
-		地址:<br>
-		厦门<br>
-		福建<br>
-		中国
-		</address>
-		
-	
-	
-	<hr>
-	<a href = "javascript:alert('爱你？)">天天瞎想，忙点自己能做到的事情呀！！！</a>
-	<h1>无敌的我</h1>
-	<p>香菇怎么办？</p>
-	<script>
-
-		alert('天天瞎想，忙点自己能做到的事情呀！！！')
-		console.log('学习吧，亲')
-
-	</script>
-
+<div id = 're' >  </div>
+<div id="show"></div>
+<script >
+    var qt =  document.getElementById('re');
+    //绑定鼠标移入事件
+    qt.onmouseover = function(){
+        document.writeln('烟笼寒水雾浓软，秦淮风姿而今还')
+    }
+</script>
+<address>
+    旺度<a href="mailto:pc554328955@gmail.com">来杯酒可好</a>.<br>
+    地址:<br>
+    厦门<br>
+    福建<br>
+    中国
+</address>
+<hr>
+<a href = "javascript:alert('爱你？)">天天瞎想，忙点自己能做到的事情呀！！！</a>
 
 
 <!-- 这儿对应的是 时间显示<div id="show"></div> -->
-
-	<script>
+<script>
+    alert('欲戴王冠，必承其重')
+    console.log('翻译：The one trying to wear the crown must withstand/bear the weight。')
     // var show = document.getElementById('show');
     var weeks = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
-
-
     function setTime () {
         var time = new Date();
         var year = time.getFullYear();
@@ -199,6 +110,5 @@
         setTime();
     }, 1000)
 </script>
-	
 </body>
 </html>
