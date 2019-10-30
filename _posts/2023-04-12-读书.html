@@ -30,7 +30,7 @@
 </audio>
 
 <!-- 第一种跳转 -->
-<a href= 'http://www.baidu.com'><b>打开百度</b>></a>
+<a href= 'http://www.baidu.com' target="_blank"><b>打开百度</b>></a>
 <a href = '../images/favicon.png'>
     <strong>清华=本地打开</strong></a>
 <a href = '/images/favicon.png'>清华=联网打开</a>
@@ -69,7 +69,10 @@
     var qt =  document.getElementById('re');
     //绑定鼠标移入事件
     qt.onmouseover = function(){
-        document.writeln('烟笼寒水雾浓软，秦淮风姿而今还')
+        // <a href="http://www.baidu.com" target="_blank"> 百度 </a>
+        // document.writeln('烟笼寒水雾浓软，秦淮风姿而今还')
+        console.log('烟笼寒水雾浓软，秦淮风姿而今还')
+
     }
 </script>
 <address>
