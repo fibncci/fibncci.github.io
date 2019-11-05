@@ -110,5 +110,10 @@ $ jekyll server					leopardpan.github.io/ 目录下， 开启本地服务
 
 ```
 https://fibncci.github.io/2019/10/README/
+
+https://github.com/leopardpan/leopardpan.github.io/
+
+页脚设置
+/Users/tianzi/Documents/fibncci.github.io/_includes/footer.html
 ```
 
