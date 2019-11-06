@@ -28,8 +28,7 @@ tag: topic
 > arr.unshift(element1, ..., elementN)
 
 ```
- 此方法是将一个或多个元素添加到数组的开头，并返回新数组的长度：
- let arr = [1, 2, 3, 4, 5]
+ 此方法是将一个或多个元素添加到数组的开头，并返回新数组的
     arr.unshift(6, 7)
     console.log(arr) //[6, 7, 2, 3, 4, 5]
     console.log(arr.length) //7 
@@ -311,8 +310,6 @@ lastIndexOf()方法返回从右向左出现某个字符或字符串的首个字�
 ## 参考文献
 
 ```
-
-
-
+g h m j m
 ```
 
