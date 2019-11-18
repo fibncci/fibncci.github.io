@@ -1,8 +1,17 @@
+---
+layout: post
+title: "gitbub下载东西"
+date: 2019-11-12
+tag: 机器学习machineLearning
+---
+
+
+
 gitbub下载东西
 
 
 
-## 方法：
+## 方法一:修改HOST or vpn
 
 第一步：去这个网站查询3个域名对应的IP地址，不能用`ping`来获取IP地址哦
 
@@ -30,7 +39,7 @@ sudo /etc/init.d/networking restart
 
 现在可以飞快的下载Github上的代码了。
 
-## 1我的ip
+**0.我的ip**
 
 ```
 https://www.ipaddress.com/
@@ -60,7 +69,7 @@ IP本地时间	2019年11月12日星期二22:40:46 +0800
 
 
 
-## github
+**1-github地址**
 
 ```
 192.30.253.113
@@ -91,7 +100,7 @@ RDAP服务器	https://rdap.arin.net/registry、http://rdap.arin.net/registry
 
 
 
-## 2
+**2地址**
 
 ```
 151.101.185.194
@@ -114,7 +123,7 @@ IP经度	-87.6517 / 87°39′6″ W
 IP时区	美国/芝加哥
 ```
 
-## 3
+**3地址**
 
 ```
 192.30.253.120
@@ -138,9 +147,7 @@ IP本地时间	周二，12 Nov 2019 09:38:55 -0600
 
 
 
-## 方法二
-
-
+## 方法二：仓库转移大法
 
 国内从github上面下载代码的速度峰值通常都是20kB/s。
 
@@ -174,20 +181,70 @@ git submodule update --init --recursive
 这时再去执行git submodule update --init --recursive 。
 以上就是提高下载子模块速度的思路。具体每步的操作，请自行搜索，网上一搜一大片。
 
-附：：
+3.  更好的办法，就是早起，早上7点多，6点多的时候，github特别快。
+
+
+
+
+
+
+
+
+
+## github.com下载
+
+```js
+【吴恩达】TensorFlow 2.0深度学习算法-中文书-免费！！！
+免费下载：https://github.com/dragen1860/Deep-Learning-with-TensorFlow-book
+注释： 是龙龙老师的，和吴恩达无关
+
+超过50m ；过了8点之后变得好慢100多k
+https://codeload.github.com/cunyu1943/ProgrammingBooks/zip/master
+
+20m  下载速度低于100，60k左右
+https://codeload.github.com/caison/java-knowledge-mind-map/zip/master
+
+java 7.4m 这个挺快的
+https://codeload.github.com/553899811/Java-Xmind/zip/master
+
+这是我在2004年至2014年间过去10年的SAS编程和分析经验中我自己的SAS实用程序宏/示例代码的集合。
+我将尝试按功能和领域来组织代码/宏，主要用于分析工作。
+1.高斯过程	JSS的HPGLIMMIX纸张和复制代码	
+2.矩阵因子化	更新SVD_bystmt并将其重命名为MatrixFactorization / SVD_bystmt.sas	
+3.杂项	演示使用交叉乘积的内核PCA计算	
+4.模型验证	
+5.文件	
+6.回归
+7.实用工具
+https://codeload.github.com/xieliaing/SAS/zip/master
+```
+
+
+
+
+
+## 参考文献
 
 ```
 关于如何修改submodule连接地址
-
+git submodule的使用
 https://blog.csdn.net/wangjia55/article/details/24400501
+几种方法简单脚本git一键提交代码
 https://www.jianshu.com/p/c81e2bd377ad
+
+win 下 git 提交代码脚本
 https://blog.csdn.net/qq_22630169/article/details/74236535
+
+git submodule的使用
 https://blog.csdn.net/wangjia55/article/details/24400501
+
+
 ```
 
+[git submodule的使用](https://blog.csdn.net/wangjia55/article/details/24400501)
+[几种方法简单脚本git一键提交代码](https://www.jianshu.com/p/c81e2bd377ad)
+[win 下 git 提交代码脚本](https://blog.csdn.net/qq_22630169/article/details/74236535)
+[git submodule的使用](https://blog.csdn.net/wangjia55/article/details/24400501)
 
 
-https://blog.csdn.net/wangjia55/article/details/24400501
-https://www.jianshu.com/p/c81e2bd377ad
-https://blog.csdn.net/qq_22630169/article/details/74236535
-https://blog.csdn.net/wangjia55/article/details/24400501
+

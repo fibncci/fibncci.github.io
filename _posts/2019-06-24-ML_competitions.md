@@ -2,7 +2,7 @@
 layout: post
 title: "机器学习-competitions"
 date: 2019-09-05
-tag: ml
+tag: 机器学习machineLearning
 ---
 
 
