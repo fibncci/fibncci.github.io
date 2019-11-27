@@ -1,8 +1,6 @@
-# The little SAS book 学习笔记 第二章(2)
+## The little SAS book第二章(2)
 
-# www.jiayounet.com
-
-## 第二章 将你的数据放入SAS（2.11-2.21）
+> 第二章 将你的数据放入SAS（2.11-2.21）
 
 ### 2.12 一行有多个观测值的原始文件读取
 
