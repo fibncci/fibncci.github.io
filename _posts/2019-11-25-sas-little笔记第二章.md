@@ -1,3 +1,16 @@
+---
+layout: post
+title: "sas-little2"
+date: 2019-11-25
+tag: sas
+---
+
+
+
+
+
+
+
 ## The little SAS book第二章(2)
 
 > 第二章 将你的数据放入SAS（2.11-2.21）

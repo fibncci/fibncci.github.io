@@ -1,4 +1,11 @@
-<<<<<<< HEAD
+---
+layout: post
+title: "sas在 jupyter运行"
+date: 2019-11-28
+tag: sas
+---
+
+
 
 
 ## pip不是内部文件

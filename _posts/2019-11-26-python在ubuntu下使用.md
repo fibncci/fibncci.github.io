@@ -1,4 +1,11 @@
-<<<<<<< HEAD
+---
+layout: post
+title: "python在ubuntu下使用"
+date: 2019-11-26
+tag: sas
+---
+
+
 
 
 ## 电脑中已经有低版本的时候
