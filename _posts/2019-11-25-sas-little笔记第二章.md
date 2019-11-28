@@ -1,12 +1,10 @@
-# The little SAS book 学习笔记 第二章(2)
+## The little SAS book第二章(2)
 
-# www.jiayounet.com
-
-## 第二章 将你的数据放入SAS（2.11-2.21）
+> 第二章 将你的数据放入SAS（2.11-2.21）
 
 ### 2.12 一行有多个观测值的原始文件读取
 
-![img](file:///C:\Users\123\AppData\Local\Temp\OICE_CEFB0038-D4D0-411F-A0D8-16C9EB103069.0\msohtmlclip1\01\clip_image001.jpg)
+
 
 当一行出现多个观测值时，可以在input语句结尾加一个停止符号@@
 
@@ -14,29 +12,25 @@
 
 例子 有一个关于降水量的数据，precipitation.dat，文件包含城市名、州名、月平均降水量、月平均降水天数：
 
-![img](file:///C:\Users\123\AppData\Local\Temp\OICE_CEFB0038-D4D0-411F-A0D8-16C9EB103069.0\msohtmlclip1\01\clip_image002.jpg)
+
 
 这个数据文件中，第一行包含了两个观测值，可以用@@的程序读取：
 
-![img](file:///C:\Users\123\AppData\Local\Temp\OICE_CEFB0038-D4D0-411F-A0D8-16C9EB103069.0\msohtmlclip1\01\clip_image003.jpg)
+
 
  
 
 日志记录如下：
 
-![img](file:///C:\Users\123\AppData\Local\Temp\OICE_CEFB0038-D4D0-411F-A0D8-16C9EB103069.0\msohtmlclip1\01\clip_image004.jpg)
+
 
 中间的说明，SAS went to a new line when INPUT statement reached past the end of a line.是指读取第二个值时达到第一行末尾，并转到下一行继续读取。通常这些信息会预示一个问题出现，但在这里它们都是你所想要的（为什么？）
 
 输出结果如下：
 
-![img](file:///C:\Users\123\AppData\Local\Temp\OICE_CEFB0038-D4D0-411F-A0D8-16C9EB103069.0\msohtmlclip1\01\clip_image005.jpg)
-
- 
-
 ### 2.13 读取原始数据的部分观测值
 
-![img](file:///C:\Users\123\AppData\Local\Temp\OICE_CEFB0038-D4D0-411F-A0D8-16C9EB103069.0\msohtmlclip1\01\clip_image006.jpg)
+
 
 有时候只需要读取原始数据的部分观测值，比如只需要年鉴中的女性数据、收入超过10万的人口数据等。
 
@@ -44,17 +38,17 @@
 
 例子 有一个关于当地交通的数据，traffic.dat数据包含街道的类型（freeways和surface）、街道类型、早晨每小时的机动车流动量、晚上每小时机动车流动量。
 
-![img](file:///C:\Users\123\AppData\Local\Temp\OICE_CEFB0038-D4D0-411F-A0D8-16C9EB103069.0\msohtmlclip1\01\clip_image007.jpg)
+
 
 如果现在你只需要freeway的数据，可以用下述程序：
 
-![img](file:///C:\Users\123\AppData\Local\Temp\OICE_CEFB0038-D4D0-411F-A0D8-16C9EB103069.0\msohtmlclip1\01\clip_image008.jpg)
+
 
 第一个input读取字符串变量，@是SAS停留在观测值上并用IF检测，第二个input读取input后面的变量值。
 
 程序执行后日志包括两部分说明，一个说明读取了8个记录，另一个说明新数据集中只包含三个观测值。
 
-![img](file:///C:\Users\123\AppData\Local\Temp\OICE_CEFB0038-D4D0-411F-A0D8-16C9EB103069.0\msohtmlclip1\01\clip_image009.jpg)
+
 
 输入结果如下所示：
 
