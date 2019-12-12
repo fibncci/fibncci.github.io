@@ -1,3 +1,12 @@
+---
+layout: post
+title: "qc-ling"
+date: 2019-12-11
+tag: sas
+---
+
+
+
 ## qc表
 
 ```sas
