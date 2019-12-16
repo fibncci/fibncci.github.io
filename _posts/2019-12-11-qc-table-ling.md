@@ -45,15 +45,23 @@ proc sql;
  select count(distinct subjid) from adsl 
  where FILTER='Y';/*筛选	受试者人数*/
 quit;
+
+
 proc sql;
   select ARMA,count(distinct subjid) from adsl 
   where RANDOM='Y'
   group by ARMA;
 quit;
+
+
 proc sql;
   select count(distinct subjid) from adsl 
   where RANDOM='Y';/*随机*/
 quit;
+
+
+
+
 proc sql;
   select ARMA,count(distinct subjid) from adsl 
   where TRTSTDT is not missing
@@ -94,6 +102,7 @@ proc freq data=adsl_1;
   table EXEAR/list sparse;  
   where ENDSRSN=1;/*提前退出研究的原因*/
 quit;
+
 
 /* 表7.2 分析人群*/
 %macro sort(var=);
