@@ -24,6 +24,9 @@ WANG Ji-quan
 WANG Willard
 
 
+<h3>友情链接</h3>
+
+[小苏](https://subaobaos.github.io/)
 
 
 

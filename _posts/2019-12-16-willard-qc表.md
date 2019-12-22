@@ -1,8 +1,19 @@
+---
+layout: post
+title: "qc表"
+date: 2019-12-16
+tag: sas
+---
+
+
+
+
+
 qc表
 
 
 
-```
+```sas
 
 
 libname  ads "E:\SHR-1314-AS-102\3 STATISTICS\Analysis Dataset\ADS_dataset\ADS_dataset";
