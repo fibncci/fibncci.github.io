@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        body,ul,li{ margin: 0; padding: 0; }
+        li{list-style: none;}
+        #banner{
+            width: 1226px;
+            height: 460px;
+            border: 1px solid red;
+            margin: 50px auto;
+            position: relative;
+        }
+        #banner ul li img {
+            width: 1226px;
+            position: absolute;
+        }
+        #icon{
+            width: 100px;
+            height: 30px;
+            position: absolute;
+            right: 30px;
+            bottom: 10px;
+        }
+        #icon .dict{
+            width: 8px;
+            height: 8px;
+            border: 3px solid hsla(0,0%,100%,.3);
+            background: rgba(0,0,0,0.4);
+            border-radius: 100%;
+            float: left;
+            margin-right: 5px;
+        }
+
+
+    </style>        
+</head>
+<body>
+    <div id="banner" >
+        <ul>
+          <!--   <li><img src="img/a1.jpg" ></li>
+            <li><img src="img/a2.jpg" ></li>
+            <li><img src="img/a3.jpg" ></li>
+            <li><img src="img/a4.jpg" ></li>
+            <li><img src="img/a5.jpg" ></li> -->
+        <li ><img    src="../images/favicon.png" ></li>
+        <li><img    src="../images/image/modules.jpg" ></li>
+        <li><img    src="../images/image/non relational database.png" ></li>
+        <li><img    src="../images/image/关系型数据库.png" ></li>
+        <li><img    src="../images/image/聊天室.png" ></li>
+        </ul>
+        <div id="icon">
+            <div class="dict"></div>
+            <div class="dict"></div>
+            <div class="dict"></div>
+            <div class="dict"></div>
+            <div class="dict"></div>
+        </div>
+    </div>
+    <script>
+        var img = document.getElementsByTagName('img');
+        // var img = document.getElementsByClassName('img');
+        var m = 0;
+        // 只显示第 m 张图片
+        function showImg(m){
+            // 将所有图片的 opacity = 0
+            for(var i = 0; i < img.length; i++){
+                img[i].style.opacity = 0;
+                img[i].style.transition = 'all .5s';
+                icon.children[i].style.borderColor = 'hsla(0,0%,100%,.3)';
+                icon.children[i].style.background = 'rgba(0,0,0,0.4)';
+            }
+            img[m].style.opacity = 1;
+            icon.children[m].style.borderColor = 'rgba(0,0,0,0.4)';
+            icon.children[m].style.background = 'hsla(0,0%,100%,.4)';
+        }
+        // 手动执行第一次
+        run();
+        // 计时器
+        timer = setInterval(run, 500);
+        function run(){
+            if( m == img.length ){
+            // if( m >= img.length ){
+                m = 0;
+            }
+            showImg(m);
+            m++;
+        }
+        // 给所有的小圆点 赋予点击事件
+        for(var i = 0; i < icon.children.length; i++){
+            // 闭包
+            (function(i){
+                icon.children[i].onclick = function(){
+                    // 清除原有的计时器
+                    clear   Interval(timer);
+                    // 显示当前所点击的 图片
+                    showImg(i);
+                    // 确保下一次图片从当前点击的图片开始, 向后轮播
+                    m = i;
+                    // 继续轮播
+                    timer = setInterval(run, 500);
+                }
+            })(i);
+        }
+        // 闭包: 数据持久化, 通过 自执行函数来实现 ()();
+    </script>
+
+
+
+
+
+</body>
+</html>
+

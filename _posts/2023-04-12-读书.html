@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>love you</title>
+    <style>
+        #re{
+            width:444px;
+            height:444px;
+            background:#8b0000;
+        }
+    </style>
+</head>
+<body>
+
+<article>
+    <h1>旺度</h1>
+    <kbd>本网站于2019年开始访问</kbd>
+</article>
+
+<aside>
+    <h4 onclick="this.innerHTML = '神'">你是谁</h4>
+</aside>
+
+<!-- 听吧。 -->
+<audio controls>
+    <source src="/images/posts/Sound/Son doll.mp3" >
+    <!-- 这儿会有console的报错。找不到文件 -->
+    <source src="../images/posts/Sound/Son doll.mp3" >
+</audio>
+
+<!-- 第一种跳转 -->
+<a href= 'http://www.baidu.com' target="_blank"><b>打开百度</b>></a>
+<a href = '../images/favicon.png'>
+    <strong>清华=本地打开</strong></a>
+<a href = '/images/favicon.png'>清华=联网打开</a>
+
+<!-- 第二种跳转 -->
+<form action="http://www.baidu.com" method="post">
+    <button>随便点</button>
+</form>
+
+<!-- 第2-2种模拟百度跳转-->
+
+<form action ="http://www.baidu.com/s">
+    <input type=text name="wd">
+    <input type="submit" value="百度一下">
+</form>
+
+<!-- 第2-3种模拟google跳转-->
+<form action ="https://www.google.com/search">
+    <input type=text name="q">
+    <input type="submit" value="google一下">
+</form>
+
+<!-- 给我写信 -->
+<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Y1ZWV1BRW1pWViMSEk0ADA4" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png"/></a>
+<!-- 01  02 21 -->
+
+<br>
+<!--第三种子窗口 -->
+<a href="http://www.baidu.com" target="frame">获取数据</a>
+<iframe src="" name="frame" frameborder="0">
+</iframe>
+
+<div id = 're' >  </div>
+<div id="show"></div>
+<script >
+    var qt =  document.getElementById('re');
+    //绑定鼠标移入事件
+    qt.onmouseover = function(){
+        // <a href="http://www.baidu.com" target="_blank"> 百度 </a>
+        // document.writeln('烟笼寒水雾浓软，秦淮风姿而今还')
+        console.log('烟笼寒水雾浓软，秦淮风姿而今还')
+
+    }
+</script>
+<address>
+    旺度<a href="mailto:pc554328955@gmail.com">来杯酒可好</a>.<br>
+    地址:<br>
+    厦门<br>
+    福建<br>
+    中国
+</address>
+<hr>
+<a href = "javascript:alert('爱你？)">天天瞎想，忙点自己能做到的事情呀！！！</a>
+
+
+<!-- 这儿对应的是 时间显示<div id="show"></div> -->
+<script>
+    alert('欲戴王冠，必承其重')
+    console.log('翻译：The one trying to wear the crown must withstand/bear the weight。')
+    // var show = document.getElementById('show');
+    var weeks = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+    function setTime () {
+        var time = new Date();
+        var year = time.getFullYear();
+        var month = fillZero(time.getMonth() + 1);
+        var day = fillZero(time.getDate());
+        var h = fillZero(time.getHours());
+        var m = fillZero(time.getMinutes());
+        var s = fillZero(time.getSeconds());
+        var w = weeks[time.getDay()];
+        show.innerHTML = year + '年' + month + '月' + day + '日 ' + h + ':' + m + ':' + s + ' ' + w;
+    }
+
+
+    function fillZero (i) {
+        return i = i < 10 ? '0' + i : i;
+    }
+    setTime();
+    setInterval(function () {
+        setTime();
+    }, 1000)
+</script>
+</body>
+</html>

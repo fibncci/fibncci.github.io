@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<title>printstar</title>
+	</head>
+		<style type="text/css">
+			button{
+				border: 1px solid block;
+			}
+			div{
+				width: 600px;
+				height: 600px;
+				border: solid 1px;
+			}
+		</style>
+	<body>
+		<button id="zfx" onclick="print('zfx')">正方形</button>
+        <button id="sjx" onclick="print('sjx')">三角形</button>
+        <button id="lx" onclick="print('lx')">菱形</button>
+        <button id="tx" onclick="print('tx')">梯形</button>
+        <button id="hzx" onclick="print('hzx')">回字形</button><br><br>
+        <input id="shang" placeholder="请输入上边长"><br><br>
+        <input id="xia" placeholder="请输入下边长"><br><br>
+		<div id="inner">
+			
+		</div>	
+
+		<hr>
+		<!-- <button id = 'math1' onclick = '100'>输出100的加法</button> -->
+
+	</body>	
+	<script type="text/javascript">		
+		function print(choose){
+			var shang = document.getElementById('shang').value;
+			var xia = document.getElementById('xia').value;
+			//console.log(shang);
+		    //console.log(xia);
+			shang = parseInt(shang);
+			xia = parseInt(xia);
+			var inner = document.getElementById('inner');
+			var tuxin = '';
+			switch(choose){
+				case 'zfx':
+					for (var i = 1; i <=xia; i++) {
+						for (var j = 1; j <= 2*xia-1; j++) {
+							if(j%2==1){
+								tuxin+="&hearts;";
+							}else{
+								tuxin+="&nbsp;&nbsp;";
+							}
+						}
+						tuxin+="<br>";
+					}
+					
+				break;
+				case 'sjx':
+					for (var i = 1; i <=xia; i++) {
+						//前面打印空格
+						for (var k = 1; k <=xia-i; k++) {
+							tuxin+="&nbsp;&nbsp;";
+						}
+						for (var j = 1; j <= 2*i-1; j++) {
+							if(j%2==1){
+								tuxin+="&hearts;";
+							}else{
+								tuxin+="&nbsp;&nbsp;";
+							}
+						}
+						tuxin+="<br>";
+					}					
+				break;
+				case 'lx':
+					for (var i = 1; i <=2*xia-1; i++) {
+						var jdxia = Math.abs(xia-i);
+						//前面打印空格
+						for (var k = 1; k <=jdxia; k++) {
+							tuxin+="&nbsp;&nbsp;";
+						}
+						for (var j = 1; j <= 2*(xia-jdxia)-1; j++) {
+							if(j%2==1){
+								tuxin+="&hearts;";
+							}else{
+								tuxin+="&nbsp;&nbsp;";
+							}
+						}
+						tuxin+="<br>";
+					}				
+				break;	
+				case 'tx':
+					n1=Math.min(shang,xia);
+					n2=Math.max(shang,xia);
+					for (var i = n1; i <=n2; i++) {						
+						//前面打印空格
+						for (var k = 1; k <= n2-i; k++) {
+							tuxin+="&nbsp;&nbsp;";
+						}
+						for (var k = 1; k <= 2*i-1; k++) {
+							if (k%2==1) {
+								tuxin+="&hearts;";
+							}else{
+								tuxin+="&nbsp;&nbsp;";
+							}
+						}
+						tuxin+="<br>";
+					}				
+				break;
+
+				case 'hzx':
+					for (var i = 1; i <= xia; i++){
+						for(var j =1;j<=2*xia-1;j++){
+							if(j%2==1){
+								if(i==1||i==xia||j==1||j==2*xia-1||((i==3||i==xia-2)&&j>=5&&j<=2*xia-5)||((j==5||j==2*xia-5)&&i>=3&&i<=xia-2)){
+									tuxin+="*";
+								}else{
+									tuxin+="&nbsp;&nbsp;";								
+								}
+							}else{
+								tuxin+="&nbsp;&nbsp;";
+							}									
+						}
+						tuxin+="<br>";
+					}
+				break;
+			}
+			inner.innerHTML=tuxin;
+		}
+	</script>
+
+	<script type="text/javascript">
+		var i = 1 ;
+	    var sum = 0;
+	    while(i<= 100){
+	        // document.write(i+'<br>')
+	        sum  = sum+i;
+	        i++;
+	    }
+	    console.log('1-100的累加是：' + sum);
+
+
+	var s= 0;
+    for (var i = 1;i<101;i++){
+        if(i%2 == 0){
+            s +=i;// 3. 将获取的数进行累加
+        }
+    }
+    console.log('1-100之间所有偶数的和：' + s);
+    
+   //这儿不可以用 <h1>输出01-50 之间的 数字；</h1>
+    for(var i = 1;i<51; i++){
+        if(i<10){
+            document.write('0')
+        }
+        document.write(i+' ')
+        if(i%10== 0){
+            document.write('<br>')
+        }
+    }
+    
+
+	</script>
+
+	<script>
+		//7*8的 表格
+	document.write('<h1 align ="center" >7*8</h1>')
+    document.write('<table width="666" height="333"' +
+        ' border="1" align="center" cellspacing="0" ' +
+        'cellpadding="3">');
+    for (var i = 1; i <= 7; i++) {
+        var bgColor = i % 2 == 0 ? 'blue' : 'green';
+    document.write('<tr bgcolor="' + bgColor + '">');
+    for (var j = 1; j <= 8; j++) {
+        document.write('<td></td>'+'sd');
+    }
+    document.write('</tr>'+'是的');
+    }
+    document.write('</table>'+'时代的');
+
+
+
+     document.write('<h1 align ="center" >9*9左上角</h1>')
+    document.write('<table border = "1" align = "center" ' +
+        'width = "666" height ="360" ' +
+        'cellspacing = "0" cellpadding="3">');
+    for (var i = 1;i<= 9;i++){
+        document.write('<tr>');
+        for (var j = 1; j<=i;j++){
+            document.write('<td>');
+            document.write(j+'*'+i+'=' + (i*j))
+            document.write('</td>');
+        }
+        document.write('</tr>')
+    }
+    document.write('</table>');
+
+
+
+
+    // 输出1-10之间的数，跳过5，来5遍
+    for (var i = 0; i < 5; i++) {
+        for (var j = 1; j <= 10; j++) {
+            if (j == 5) {
+                continue;
+            }
+            document.write(j + ' ');
+        }
+        document.write('<br>'+'<hr>')
+        document.write('<br>')
+        document.write('<hr>')
+    }
+
+
+</script>
+</html>
