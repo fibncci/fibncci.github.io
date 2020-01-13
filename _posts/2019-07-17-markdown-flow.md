@@ -777,3 +777,8 @@ note over C,S: 特定技术领域
 
 ## 参考文献
 
+༄྄ེིོུ平常ཉ྄ིོུ༄:
+https://www.cnblogs.com/nanqiang/articles/8244309.html
+
+༄྄ེིོུ平常ཉ྄ིོུ༄:
+https://www.iminho.me/wiki/docs/mindoc/mermaid.md
