@@ -1,3 +1,14 @@
+---
+layout: post
+title: "jupyter SQL做数据分析"
+date: 2020-02-11
+tag: sql
+---
+
+
+
+
+
 ## jupyter SQL做数据分析
 
 ```python
