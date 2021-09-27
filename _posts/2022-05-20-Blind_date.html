@@ -9,20 +9,35 @@
 body {
 margin: 0;
 
-background-image: url('/images/payimg/back1ground.jpg');
+background-image: url('/images/payimg/back1ground.jpeg');
 
 background-repeat:no-repeat;
 
 background-position:0% 0%;
 background-size:cover;
 
-/*background-color: #22C3AA;*/
+}
+
+
+img.floatright { 
+
+    float: right; 
+
+    margin: 5px; 
 
 }
 </style>
 
 <body background-color:rgba(0,152,50,0.3)>
 
+
+
+<!-- 听吧。 -->
+<audio controls  autoplay loop>
+    <source src="/images/posts/Sound/Son doll.mp3" >
+    <!-- 这儿会有console的报错。找不到文件 -->
+    <source src="../images/posts/Sound/Son doll.mp3" >
+</audio>
 
 
 <form action="http://www.qfedu.com/jiaoyou.py" method="post">
@@ -213,24 +228,38 @@ background-size:cover;
 </table>
 
 
-
-
-<img src="/images/payimg/wangjq202109.jpeg"  
+<table><tr>
+<td><img src="/images/payimg/wangjq2021091.jpg"  
    width="800"  
       height="1100" 
       title="这是王基权的照片" 
       alt="这是王基权的logo" 
- />
-
- <br>
-
-
-<img src="../images/payimg/wangjq202109.jpeg"  
+      border=0></td>
+<td>
+<!-- <img src="../images/payimg/wangjq2021091.jpg"  
    width="800"  
       height="1100" 
       title="这是王基权的照片" 
       alt="这是王基权的logo" 
- />
+      border=0></td> -->
+<td><img src="/images/payimg/vx.png"  
+   width="500"  
+      height="500" 
+      title="这是王基权的vx" 
+      alt="这是王基权的logo" 
+      class="floatright" 
+      border=0></td>
+<!-- <td><img src="../images/payimg/vx.png"  
+   width="500"  
+      height="500" 
+      title="这是王基权的vx" 
+      alt="这是王基权的vx" 
+      class="floatright" 
+      border=0></td> -->
+</tr></table>
+
+
+ 
 
 
 
