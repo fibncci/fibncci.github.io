@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>装修图</title>
+    <p>欢迎您来到天天装修-卢卡硬装！</p>
+    <p>请观看</p>
+    <p>图片比较大，请稍等;</p>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        img{
+            display: block;
+        }
+        #lun{
+            width: 1500px;
+            height: 900px;
+            border: 1px solid #CCC;
+            margin: 0 auto; 
+            margin-top: 120px;
+            position: relative;
+
+            cursor: pointer;
+        }
+        #lun>ul>li{
+            position: absolute;
+            display: none;
+        }
+        #lun>ul>li.active{
+            display: block;
+        }
+        #circle-list{
+            width: 180px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -90px;
+            border-radius: 10px;
+        }
+        #circle-list>ul{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        #circle-list>ul>li{
+            width: 12px;
+            height: 12px;
+            background: #FFF;
+            border-radius: 50%;
+        }
+        #circle-list>ul>li.active-list{
+            background: #DB192A;
+        }
+        #lun>.arrow{
+            width: 30px;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+            font-size: 20px;
+            font-family: 楷体;
+            font-weight: bold;
+            color: #FFF;
+            text-align: center;
+            line-height: 60px;
+            user-select: none;
+        }
+        #lun>.arrow:hover{
+            background: rgba(0, 0, 0, 0.4);
+        }
+        #lun>#left{
+            left: 0;
+        }   `
+        #lun>#right{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="lun">
+    <ul>
+
+<!-- 
+        <li><img src="../images/payimg/Hardcover4.jpg"  width="1490"   height="890"   ></li>
+        <li><img src="../images/payimg/Hardcover3.jpg"  width="1490"   height="890"   ></li>
+        <li><img src="../images/payimg/Hardcover2.jpg" width="1490"   height="890"   ></li>
+        <li><img src="../images/payimg/Hardcover1.jpg"  width="1490"   height="890"   ></li>        
+        <li><img src="../images/payimg/Hardcover4.jpg"  width="1490"   height="890"   ></li>
+        <li><img src="../images/payimg/Hardcover3.jpg"  width="1490"   height="890"   ></li>
+        <li><img src="../images/payimg/Hardcover2.jpg" width="1490"   height="890"   ></li>
+        <li><img src="../images/payimg/Hardcover1.jpg"  width="1490"   height="890"   ></li> -->
+ 
+        <li><img src="/images/payimg/Hardcover4.jpg"  width="1490"  height="890"    ></li>
+        <li><img src="/images/payimg/Hardcover3.jpg"  width="1490"   height="890"   ></li>
+        <li><img src="/images/payimg/Hardcover2.jpg" width="1490"   height="890"   ></li>
+        <li><img src="/images/payimg/Hardcover1.jpg"  width="1490"   height="890"   ></li>        
+        <li><img src="/images/payimg/Hardcover4.jpg"  width="1490"   height="890"   ></li>
+        <li><img src="/images/payimg/Hardcover3.jpg"  width="1490"   height="890"   ></li>
+        <li><img src="/images/payimg/Hardcover2.jpg" width="1490"   height="890"   ></li>
+        <li><img src="/images/payimg/Hardcover1.jpg"  width="1490"   height="890"   ></li>
+   
+ 
+
+    </ul>
+
+    <div id="circle-list">
+        <ul>
+            <li class="active-list"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div id="left" class="arrow"><</div>
+    <div id="right" class="arrow">></div>
+</div>
+</body>
+<script>
+    var lun = document.getElementById('lun');
+    var circleList = document.getElementById('circle-list');
+
+    var left = document.getElementById('left');
+    var right = document.getElementById('right');
+
+    var lis = lun.children[0].children;
+    var cLis = circleList.children[0].children;
+
+    var len = lis.length;
+    console.log(cLis);
+    var index = 0;
+    var run;
+    function autoRun () {
+        run = setInterval(function () {
+            lis[index].removeAttribute('class');
+            cLis[index].removeAttribute('class');
+            index++;
+            if (index == lis.length) {
+                index = 0;
+            }
+            lis[index].setAttribute('class', 'active');
+            cLis[index].setAttribute('class', 'active-list');
+        }, 1000)
+    }
+    autoRun();
+    lun.onmouseenter = function () {
+        clearInterval(run);
+    }
+    lun.onmouseleave = function () {
+        autoRun();
+    }
+    for (var i = 0; i < cLis.length; i++) {
+        cLis[i].onmouseover = (function (i) {
+
+            //数据持久化，用闭包==实用 自执行函数
+            return function () {
+                lis[index].removeAttribute('class');
+                cLis[index].removeAttribute('class');
+                index = i;
+                lis[i].setAttribute('class', 'active');
+                cLis[i].setAttribute('class', 'active-list');
+            }
+        })(i)
+    }
+    left.onclick = function () {
+        lis[index].removeAttribute('class');
+        cLis[index].removeAttribute('class');
+        index--;
+        if (index < 0 ) {
+            index = lis.length - 1;
+        }
+        lis[index].setAttribute('class', 'active');
+        cLis[index].setAttribute('class', 'active-list');
+    }
+    right.onclick = function () {
+        lis[index].removeAttribute('class');
+        cLis[index].removeAttribute('class');
+        index++;
+        if (index == lis.length) {
+            index = 0;
+        }
+        lis[index].setAttribute('class', 'active');
+        //		// 显示
+        cLis[index].setAttribute('class', 'active-list');
+    }
+
+
+
+
+</script>
+<div>
+    <p>寻求合作，加微信有优惠，可以详谈，您的设计方案！包你满意，性价比高</p>
+    <td><img src="../images/payimg/vx2.png"  
+   width="400"  
+      height="440" 
+      title="这是王师傅的vx" 
+      alt="这是王师傅的logo" 
+      class="floatright" 
+      border=0></td>
+
+</div>
+</html>
