@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2023抽奖程序</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://lib.baomitu.com/lodash.js/4.14.1/lodash.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .list-complete-item {
+            transition: all 1s;
+            display: inline-block;
+            border: 1px solid #ccc;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center
+        }
+        
+        .draw-bg {
+            background-color: red;
+            transform: scale(1.5)
+        }
+        
+        .list-complete-enter,
+        .list-complete-leave-to {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .list-complete-leave-active {
+            position: absolute;
+        }
+        
+        .draw {
+            height: 100px;
+        }
+        
+        button {
+            padding: 5px 10px;
+            margin: 20px;
+        }
+        
+        li {
+            float: left
+        }
+        
+        .draw-list span {
+            display: inline-block;
+            padding: 10px;
+            background: red;
+            color: #fff
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="list-complete-demo" class="demo">
+        <button v-on:click="start">start</button>
+        <button v-on:click="end">end</button>
+        <div class="draw-list">
+            <span v-for="item in target">{{item}}</span>
+        </div>
+        <transition-group name="list-complete" tag="p">
+            <span v-for="item in arrList" v-bind:key="item" class="list-complete-item" :class="{'draw-bg': item == value}">
+                {{ item }}
+            </span>
+        </transition-group>
+    </div>
+    <script>
+        new Vue({
+            el: '#list-complete-demo',
+            data: {
+                arrList: [
+                    "大金镯子",
+                    "大金戒指",
+                    "大金耳坠",                    
+                    "空",
+                    "学习",
+                    "看书",                    
+                    "大金镯子",
+                    "大金戒指",
+                    "大金耳坠",                    
+                    "空",
+                    "学习",
+                    "看书",                    
+                    "大金镯子",
+                    "大金戒指",
+                    "大金耳坠",                    
+                    "空",
+                    "看书",
+                    "大金耳坠",
+                    "大金戒指",
+                    "大金耳坠"
+                ],
+                target: [],
+                index: -1,
+                timer: null,
+                value: '',
+                status: true
+            },
+            mounted() {
+                if (!localStorage.getItem('initData')) {
+                    localStorage.setItem('initData', JSON.stringify(this.arrList))
+                } else {
+                    this.arrList = JSON.parse(localStorage.getItem('initData'))
+                }
+                if (localStorage.getItem('drawList')) {
+                    this.target = JSON.parse(localStorage.getItem('drawList'))
+                }
+
+            },
+            methods: {
+                start() {
+                    if (this.status) {
+                        if (this.index != -1) {
+                            this.arrList.splice(this.index, 1)
+                            localStorage.setItem('initData', JSON.stringify(this.arrList))
+                        }
+                        this.shuffle()
+                        setTimeout(() => {
+                            this.recursive()
+                        }, 800)
+                        this.status = !this.status
+                    }
+                },
+                randomIndex: function() {
+                    this.index = Math.floor(Math.random() * this.arrList.length)
+                    return this.index
+                },
+                remove: function() {
+                    this.arrList.splice(this.randomIndex(), 1)
+                },
+                shuffle: function() {
+                    this.arrList = _.shuffle(this.arrList)
+                },
+                recursive() {
+                    clearTimeout(this.timer)
+                    this.timer = setTimeout(() => {
+                        this.value = this.arrList[this.randomIndex()]
+                        this.recursive()
+                    }, 200)
+                },
+                end() {
+                    if (this.status) {
+                        return
+                    }
+                    clearTimeout(this.timer)
+                    this.index = this.randomIndex()
+                    this.value = this.arrList[this.index]
+                    this.target.push(this.value)
+                    localStorage.setItem('drawList', JSON.stringify(this.target))
+                    this.status = !this.status
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
