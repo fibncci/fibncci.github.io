@@ -1,168 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>2023抽奖程序</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://lib.baomitu.com/lodash.js/4.14.1/lodash.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-        .list-complete-item {
-            transition: all 1s;
-            display: inline-block;
-            border: 1px solid #ccc;
-            width: 80px;
-            height: 80px;
-            line-height: 80px;
-            text-align: center
-        }
-        
-        .draw-bg {
-            background-color: red;
-            transform: scale(1.5)
-        }
-        
-        .list-complete-enter,
-        .list-complete-leave-to {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        
-        .list-complete-leave-active {
-            position: absolute;
-        }
-        
-        .draw {
-            height: 100px;
-        }
-        
-        button {
-            padding: 5px 10px;
-            margin: 20px;
-        }
-        
-        li {
-            float: left
-        }
-        
-        .draw-list span {
-            display: inline-block;
-            padding: 10px;
-            background: red;
-            color: #fff
-        }
-    </style>
-
+    <title>huatiePrize-2016</title>
+    <link rel="stylesheet" href="../css/Sweepstakes.css">
+    <script language="JavaScript" src="../js/jquery_1_10_2_min.js"></script>
 </head>
+<script language="JavaScript">
+    // 人数
+    var x = 1;
+    var y = 407;
+    // 必中名单
+    var z = [274, 53];
+    // 中奖名单
+    var prizeList = new Array();
 
-<body>
-    <div id="list-complete-demo" class="demo">
-        <button v-on:click="start">start</button>
-        <button v-on:click="end">end</button>
-        <div class="draw-list">
-            <span v-for="item in target">{{item}}</span>
-        </div>
-        <transition-group name="list-complete" tag="p">
-            <span v-for="item in arrList" v-bind:key="item" class="list-complete-item" :class="{'draw-bg': item == value}">
-                {{ item }}
-            </span>
-        </transition-group>
-    </div>
-    <script>
-        new Vue({
-            el: '#list-complete-demo',
-            data: {
-                arrList: [
-                    "大金镯子",
-                    "大金戒指",
-                    "大金耳坠",                    
-                    "空",
-                    "学习",
-                    "看书",                    
-                    "大金镯子",
-                    "大金戒指",
-                    "大金耳坠",                    
-                    "空",
-                    "学习",
-                    "看书",                    
-                    "大金镯子",
-                    "大金戒指",
-                    "大金耳坠",                    
-                    "空",
-                    "看书",
-                    "大金耳坠",
-                    "大金戒指",
-                    "大金耳坠"
-                ],
-                target: [],
-                index: -1,
-                timer: null,
-                value: '',
-                status: true
-            },
-            mounted() {
-                if (!localStorage.getItem('initData')) {
-                    localStorage.setItem('initData', JSON.stringify(this.arrList))
-                } else {
-                    this.arrList = JSON.parse(localStorage.getItem('initData'))
-                }
-                if (localStorage.getItem('drawList')) {
-                    this.target = JSON.parse(localStorage.getItem('drawList'))
-                }
+    var prizeCount = 0;
 
-            },
-            methods: {
-                start() {
-                    if (this.status) {
-                        if (this.index != -1) {
-                            this.arrList.splice(this.index, 1)
-                            localStorage.setItem('initData', JSON.stringify(this.arrList))
-                        }
-                        this.shuffle()
-                        setTimeout(() => {
-                            this.recursive()
-                        }, 800)
-                        this.status = !this.status
-                    }
-                },
-                randomIndex: function() {
-                    this.index = Math.floor(Math.random() * this.arrList.length)
-                    return this.index
-                },
-                remove: function() {
-                    this.arrList.splice(this.randomIndex(), 1)
-                },
-                shuffle: function() {
-                    this.arrList = _.shuffle(this.arrList)
-                },
-                recursive() {
-                    clearTimeout(this.timer)
-                    this.timer = setTimeout(() => {
-                        this.value = this.arrList[this.randomIndex()]
-                        this.recursive()
-                    }, 200)
-                },
-                end() {
-                    if (this.status) {
-                        return
-                    }
-                    clearTimeout(this.timer)
-                    this.index = this.randomIndex()
-                    this.value = this.arrList[this.index]
-                    this.target.push(this.value)
-                    localStorage.setItem('drawList', JSON.stringify(this.target))
-                    this.status = !this.status
-                }
+    var prizes = prizeList.join(",");
+    // 判断开始&结束
+    var isPrize = true;
+
+    // 定时器
+    var timer;
+    $(document).keypress(function(event){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if("13" == keycode && isPrize){
+            console.log("开始");
+            isPrize = false;
+            prizes = prizeList.join(",");
+            interval();
+        } else if("13" == keycode && !isPrize){
+            console.log("结束");
+            isPrize = true;
+            clearInterval(timer);
+
+            if (z.length > 0 && z.length > prizeCount){
+                var rand = parseInt(Math.random() * (1 - 10 + 1) + 10);
+                var r = rand%2;
+                $(".main").eq(r).find("div").eq(rand%5).html("<img class=\"people\" src=\"images/bb (" + (z[prizeCount]) + ").jpg\" />");
+                prizeCount += 1;
             }
-        })
-    </script>
-</body>
 
+
+            // 添加到以中奖名单
+            var l = $(".main").find("div > img").each(function (i) {
+                var reg = /[1-9][0-9]*/g;
+                var people = $(this).attr("src")
+                var numList = people.match(reg);
+                prizeList.push(numList[0]);
+                console.log("中奖人" + numList[0]);
+                console.log(prizeList);
+            });
+        }
+    });
+
+    // 定时执行
+    function interval() {
+        timer = setInterval(runPrize, 50);
+    }
+
+    /**
+     * 开始抽奖
+     */
+    function runPrize(){
+        var rands = "";
+        var html = "";
+        var zz = z.toString() + ",";
+        for(var h = 0; h < 2; h++){
+            html += "<div class=\"main\">";
+            for (var i = 0; i < 5; i++){
+                var rand = parseInt(Math.random() * (x - y + 1) + y);
+                rands += rand + ",";
+                var test =  new RegExp(rand, "g");
+                var result = rands.match(test);
+                console.log("aaaaaaaa" + zz);
+
+                if (zz.indexOf(rand) > 0){
+                    console.log("以中过奖");
+                    i -= 1;
+                    continue;
+                }
+                if (result.length > 1){
+                    console.log("以中过奖");
+                    i -= 1;
+                    continue;
+                }
+                // 判断是否中过奖
+                if (prizes.indexOf(rand + ",") > 0){
+                    console.log("以中过奖");
+                    i -= 1;
+                    continue;
+                }
+                var imgUrl = "images/bb ("+ (rand) + ").jpg";
+                html += "<div class=\"prizePeople\"><img class=\"people\" src=\"" + imgUrl + "\" /></div>";
+            }
+            html += "</div>";
+            rands = "";
+        }
+        $(".cen").html(html);
+    }
+
+    /*var timer = setInterval(function () {
+        var html = "";
+        for (var i = 0; i < 6; i++){
+            var rand = parseInt(Math.random() * (x - y + 1) + y);
+            console.log(rand);
+            var imgUrl = "images/bb ("+ (rand) + ").jpg";
+            html += "<div class=\"prizePeople\"><img class=\"people\" src=\"" + imgUrl + "\" /></div>";
+        }
+        $(".main").html(html);
+    }, 500);*/
+
+
+    /*setInterval(function () {
+        var html = "";
+        for (var i = 0; i < 6; i++){
+            var rand = parseInt(Math.random() * (x - y + 1) + y);
+            console.log(rand);
+            var imgUrl = "images/bb ("+ (rand) + ").jpg";
+            html += "<img class=\"people\" src=\"images/抽奖照片/1.jpg\" />";
+            $(".people").eq(i).attr("src", imgUrl);
+        }
+        if (!isPrize){
+            clearInterval(1);
+        }
+    }, 50);*/
+
+
+// 使用html写一个抽奖页面
+// 名称有：大金镯子，大金戒指，大金项链，大金耳坠，香水，口红，护肤品，鲜花，红包，衣服，鞋子，包包，学习，看书，考证，好好表现
+// html要求：支持可以大小缩放，背景要求好看喜庆，有结束时间的倒计时的显示，有显示
+// 要求：4*4 的方格，在文中，占中间1/3
+// 设置命令按钮：
+// 开始：点这个按钮，会随机在16个方格上跳动
+// 结束：点这个按钮会停在这个跳动的方格上
+// 自动结束：设置时间3s，在16个按钮上随机跳动，最后停在某一个方格上
+// 自动结束2：设置时间3s，在16个按钮上随机跳动，最后停在”好好表现“方格上
+// 全部写在html中
+
+// 活动名称：二威科技2023年-2099年四季抽奖2023年幸运抽奖
+// 活动时间：2023年2月10日至2099年3月10日
+
+</script>
+<body>
+<div class="bg">
+    <img src="../images/posts/html5/二威科技23_99.png" class="bgimg"/>
+</div>
+<!--<div class="title">
+    活动名称：二威科技2023年-2099年四季抽奖2023年幸运抽奖
+    活动时间：2023年2月10日至2099年3月10日
+</div>-->
+<div class="cen">
+    <div class="main">
+        <div class="prizePeople">
+            <img class="people" src="images/head.gif" />
+        </div>
+
+        <div class="prizePeople">
+            <img class="people" src="images/head.gif" />
+        </div>
+
+        <div class="prizePeople">
+            <img class="people" src="images/head.gif" />
+        </div>
+
+        <div class="prizePeople">
+            <img class="people" src="images/head.gif" />
+        </div>
+
+        <div class="prizePeople">
+            <img class="people" src="images/head.gif" />
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="prizePeople">
+            <img class="people" src="images/head.gif" />
+        </div>
+
+        <div class="prizePeople">
+            <img class="people" src="images/head.gif" />
+        </div>
+
+        <div class="prizePeople">
+            <img class="people" src="images/head.gif" />
+        </div>
+
+        <div class="prizePeople">
+            <img class="people" src="images/head.gif" />
+        </div>
+
+        <div class="prizePeople">
+            <img class="people" src="images/head.gif" />
+        </div>
+    </div>
+</div>
+
+</body>
 </html>
