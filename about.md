@@ -22,11 +22,11 @@ title: 关于我
 <h3> 我的博客 </h3>  
 如果对我有兴趣，一起探讨学习
 <p>
-微信 pc54328955
+微信 fibncci
 <p>
 WANG Ji-quan
 <p>
-Dixie & Willard
+Gladys & Willard
 
 <h3>友情链接</h3>
 <a href="https://subaobaos.github.io/"  target="_blank">小苏</a>
