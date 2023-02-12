@@ -3,15 +3,15 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>网页抽奖小工具</title>
+    <title>网页抽奖</title>
 
-    <meta name="description" content="一个简单的在线抽奖系统, 可用于公司年会抽奖, 电视台抽奖等，可以自己设定抽奖名单、抽奖人数、每次出奖人数，有防止重复得奖的功能。">
+    <meta name="description" content="一个简单的在线抽奖系统, 可以自己设定抽奖名单、抽奖人数、每次出奖人数，有防止重复得奖的功能。此次三等奖每人500块">
     <meta name="keywords" content="">
     <meta name="baidu-tc-verification" content="3e8294dabe46e8def7d4b790be59d4cc">
 
-    <link rel="stylesheet" type="text/css" href="css/jquery_1_7.css">
-    <script type="text/javascript" src="js/jquery_17.js"></script>
-    <script type="text/javascript" src="js/jquery_ui172.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/jquery_1_7.css">
+    <script type="text/javascript" src="/js/jquery_17.js"></script>
+    <script type="text/javascript" src="/js/jquery_ui172.js"></script>
 
     <style type="text/css">
         table {
@@ -156,7 +156,7 @@
                 });
 
                 // 绑定回车键盘操作
-                $(document).keypress(function(e) {
+                $(document).addEventListener(function(e) {
                     switch (e.which) {
                         case 13:
                             game.process();
@@ -178,7 +178,7 @@
                         <li class="ui-corner-top ui-state-default"><a href="#tabs-4">帮助</a></li>
                     </ul>
 
-                    <div id="tabs-1" style="background: url(&quot;images/posts/html5/2.jpg&quot;) center center no-repeat;" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+                    <div id="tabs-1" style="background: url(&quot;/images/posts/html5/1.jpg&quot;) center center no-repeat;" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
                         <h1 id="event_title"><span>抽奖活动</span></h1>
 
                         <div id="rotate_div" style="display: block;">
@@ -230,7 +230,7 @@
 
                         <label>背景图片</label>
                         <div>可以输入图片链接使用网络上的图片, 也可以把图片拷贝到当前目录, 把图片文件名填入即可.</div>
-                        <div><input name="background_image" type="text" value="images/posts/html5/2.jpg"></div>
+                        <div><input name="background_image" type="text" value="/images/posts/html5/2.jpg"></div>
 
 
                         <p><input type="button" value="保存" onclick="save_setting()"></p>
@@ -258,11 +258,11 @@
 等待开始
 开场(open): 奖项介绍
 奖项循环: 如果多于一个奖项, 则循环
-    奖项开场(step_open)
-    摇奖循环: 如果不是一次开完一个奖项, 则循环
-        摇奖开始(rotate_start)
-        摇奖结束(rotate_stop)
-    奖项结束(step_close): 单项中奖名单
+  奖项开场(step_open)
+  摇奖循环: 如果不是一次开完一个奖项, 则循环
+    摇奖开始(rotate_start)
+    摇奖结束(rotate_stop)
+  奖项结束(step_close): 单项中奖名单
 闭场(close)
                         </pre>
                     </div>
@@ -345,10 +345,10 @@
 
                     开场(open)
                     循环{
-                        奖项开场(step_open)
-                        奖项抽奖(rotate_start)
-                        奖项抽奖(rotate_stop)
-                        奖项闭场(step_close)
+                      奖项开场(step_open)
+                      奖项抽奖(rotate_start)
+                      奖项抽奖(rotate_stop)
+                      奖项闭场(step_close)
                     }
                     闭场(close)
 
