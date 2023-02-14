@@ -3,15 +3,14 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>网页抽奖小工具</title>
-
-    <meta name="description" content="一个简单的在线抽奖系统, 可用于公司年会抽奖, 电视台抽奖等，可以自己设定抽奖名单、抽奖人数、每次出奖人数，有防止重复得奖的功能。">
+    <title>网页抽奖willard</title>
+    <meta name="description" content="一个简单的在线抽奖系统,willard自定义">
     <meta name="keywords" content="">
     <meta name="baidu-tc-verification" content="3e8294dabe46e8def7d4b790be59d4cc">
 
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.7.2.custom.css">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.7.2.custom.css">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.7.2.custom.min.js"></script>
 
     <style type="text/css">
         table {
@@ -178,7 +177,7 @@
                         <li class="ui-corner-top ui-state-default"><a href="#tabs-4">帮助</a></li>
                     </ul>
 
-                    <div id="tabs-1" style="background: url(&quot;images/2.jpg&quot;) center center no-repeat;" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+                    <div id="tabs-1" style="background: url(&quot;/images/posts/html5/3.jpg&quot;) center center no-repeat;" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
                         <h1 id="event_title"><span>抽奖活动</span></h1>
 
                         <div id="rotate_div" style="display: block;">
@@ -198,40 +197,16 @@
                         <label>奖项设置</label>
                         <div>每行一个奖项, 格式为竖线分隔的: 奖项名|数量|每次抽几个|奖品</div>
                         <textarea name="prizes" rows="6" cols="84">
-三等奖|4|2|美女1名/每人
-二等奖|2|2|100万美金/每人
-一等奖|1|1|10本世界名著/每人
+一等奖|1|1|学习视频资料/跳绳/跑步/看书
                         </textarea>
 
                         <label>候选人列表</label>
                         <div>每行一人, 或半角逗号分隔</div>
                         <textarea name="candidates" rows="6" cols="84">
-员工A
-员工B
-员工C
-员工D
-员工E
-员工F
-员工G
-员工H
-员工I
-员工J
-员工K
-员工L
-员工M
-员工N
-员工O
-员工P
-员工Q
-员工R
-员工S
-员工T
-员工U
-员工V
-员工W
-员工X
-员工Y
-员工Z
+恭喜willard获得新任务：跑步
+恭喜willard获得新任务：看书
+恭喜willard获得新任务：学习视频资料
+恭喜willard获得新任务：跳绳
                         </textarea>
 
                         <label>跳动时间间隔</label>
@@ -239,7 +214,7 @@
 
                         <label>背景图片</label>
                         <div>可以输入图片链接使用网络上的图片, 也可以把图片拷贝到当前目录, 把图片文件名填入即可.</div>
-                        <div><input name="background_image" type="text" value="images/2.jpg"></div>
+                        <div><input name="background_image" type="text" value="/images/posts/html5/3.jpg"></div>
 
 
                         <p><input type="button" value="保存" onclick="save_setting()"></p>
@@ -267,11 +242,11 @@
 等待开始
 开场(open): 奖项介绍
 奖项循环: 如果多于一个奖项, 则循环
-	奖项开场(step_open)
-	摇奖循环: 如果不是一次开完一个奖项, 则循环
-		摇奖开始(rotate_start)
-		摇奖结束(rotate_stop)
-	奖项结束(step_close): 单项中奖名单
+    奖项开场(step_open)
+    摇奖循环: 如果不是一次开完一个奖项, 则循环
+        摇奖开始(rotate_start)
+        摇奖结束(rotate_stop)
+    奖项结束(step_close): 单项中奖名单
 闭场(close)
                         </pre>
                     </div>
@@ -354,10 +329,10 @@
 
                     开场(open)
                     循环{
-                    	奖项开场(step_open)
-                    	奖项抽奖(rotate_start)
-                    	奖项抽奖(rotate_stop)
-                    	奖项闭场(step_close)
+                        奖项开场(step_open)
+                        奖项抽奖(rotate_start)
+                        奖项抽奖(rotate_stop)
+                        奖项闭场(step_close)
                     }
                     闭场(close)
 
@@ -639,11 +614,8 @@
                         game.init();
                     }
                 </script>
-
             </div>
-
         </div>
     </div>
 </body>
-
 </html>
